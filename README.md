@@ -1,0 +1,93 @@
+# Library Book Ordering Application
+
+## To get the project running
+
+### Activate virtual environment
+Make sure virtualenv is installed:
+```
+pip install virtualenv
+```
+
+Run virtual environment:
+```
+cd library-book-ordering
+source venv/bin/activate
+```
+**Note:** `(venv)` should be at the start of each line in the terminal.
+
+### Install dependencies
+In terminal with virtual environment (venv) running:
+```
+cd library-book-ordering
+pip install -r requirements.txt
+cd library-book-ordering/frontend
+npm install
+```
+
+### Run the dev server
+In terminal with virtual environment running:
+```
+cd library-book-ordering
+python manage.py runserver
+```
+**Note:** this runs the Django server.
+
+In a second terminal:
+```
+cd library-book-ordering/frontend
+npm run dev
+```
+**Note:** this watches for changes to the React folders and recompiles the bundled JavaScript file (Webpack/Babel).
+
+## Development Info
+
+### To update the database after table changes in models.py
+```
+cd library-book-ordering
+python manage.py makemigrations
+python manage.py migrate
+```
+
+### Superuser
+- Username: user
+- Email: user@email.com
+- Password: pass
+
+## Folder Structure
+### [API](./api/)
+The internal API. Connects to the database and requests data from Google Books. Hosted at http://127.0.0.1:8000/api/
+
+- [admin.py](./api/admin.py) -> admin view settings
+- [models.py](./api/models.py) -> database settings
+- [serializers.py](./api/serializers.py) -> api json settings
+- [tests.py](./api/tests.py) -> Python unit tests
+- [urls.py](./api/urls.py) -> api endpoints
+- [views.py](./api/views.py) -> api server logic
+
+### [Frontend](./frontend/)
+The frontend UI hosted at http://127.0.0.1:8000/
+- [src](./frontend/src/) -> React source folder
+    - [components](./frontend/src/components/) -> React components (almost everything goes here!)
+    - [index.js](./frontend/src/index.js) -> React entry point (this shouldn't be changed)
+- [static](./frontend/src/static/) -> frontend static files
+    - [css](./frontend/src/static/css) -> css files (to override Bootstrap)
+    - [frontend](./frontend/src/static/frontend) -> bundled JavaScript file (this shouldn't be changed)
+    - [images](./frontend/src/static/images) -> static images for frontend
+- [templates](./frontend/templates/frontend/) -> frontend html templates
+- [babel.config.json](./frontend/babel.config.json) -> babel settings (JavaScript transpiler)
+- [package.json](./frontend/package.json) -> npm settings (Node modules and scripts)
+- [tests.py](./frontend/tests.py) -> Python unit tests
+- [urls.py](./frontend/urls.py) -> frontend endpoints
+- [views.py](./frontend/views.py) -> frontend server logic
+- [webpack.config.js](./frontend/webpack.config.js) -> webpack settings (JavaScript bundler)
+
+
+### [Django Project Settings](./library_book_ordering/)
+- [settings.py](./library_book_ordering/settings.py) -> main project settings
+- [urls.py](./library_book_ordering/urls.py) -> main project urls (these shouldn't be changed)
+
+### Other files
+- db.sqlite3 -> this shouldn't need to be changed directly (see [models.py](./api/models.py))
+- manage.py -> Django manager (used to access Django commands)
+- [requirements.txt](./requirements.txt) -> Python required packages file
+- venv -> virtual environment folder
