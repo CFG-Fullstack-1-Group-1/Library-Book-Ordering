@@ -36,7 +36,7 @@ If done successfully, we aim to have a log-on function for Librarians and Users 
 As part of the tracking of orders, the log-on functionality will provide an option to check the status of a book’s order (Submitted, Accepted, Rejected, In Transit, Delivered). A second issue faced by the Library in this example is that the user has to call or keep constant track of their book orders by coming in-person. By having the log-on functionality, it provides a method for the user to check without having to enquire at the library. 
 
 ## Architecture diagram
-![[architecture.png]]
+![Diagram of the application architecture](architecture.png)
 
 Librarians will access the application through a React frontend hosted within a Django template.
 
@@ -53,7 +53,7 @@ The order team will have access to the application through the Django admin view
 The librarian will be able to view the orders they have created and see their current status. When they view this part of the React frontend, React will send a get request to the Django API. Then, if the user is authenticated, the API will return the details of the user's current orders.
 
 ### Database Structure
-![[database.png]]
+![Diagram of the database structure](database.png)
 
 There will be four tables: User, Borrower, Book and Order.
 
