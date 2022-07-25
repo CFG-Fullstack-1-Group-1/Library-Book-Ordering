@@ -30,7 +30,7 @@ In terminal with virtual environment running:
 cd library-book-ordering
 python manage.py runserver
 ```
-**Note:** this runs the Django server.
+**Note:** this runs the Django server (and will run the front-end stuff).
 
 In a second terminal:
 ```
