@@ -13,6 +13,11 @@ Run virtual environment:
 cd library-book-ordering
 source venv/bin/activate
 ```
+For windows
+```
+py -m venv env
+.\env\Scripts\activate
+```
 **Note:** `(venv)` should be at the start of each line in the terminal.
 
 ### Install dependencies
