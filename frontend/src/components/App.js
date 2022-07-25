@@ -7,13 +7,13 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 // Importing the main items for the site
-import Navbar from './components/Navbar';
-import Home from './components/pages/Home';
-import Search from './components/pages/Search';
-import Order from './components/pages/Order';
-import AboutUs from './components/pages/AboutUs';
-import ContactUs from './components/pages/ContactUs';
-import Footer from './components/Footer';
+import Navbar from './Navbar';
+import Home from './pages/Home';
+import Search from './pages/Search';
+import Order from './pages/Order';
+import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
+import Footer from './Footer';
 
 function App() {
   return (
