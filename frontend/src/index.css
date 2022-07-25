@@ -1,0 +1,64 @@
+:root {
+  --primary-color: #2FB8DA;
+  --primary-dark: #0348A4;
+  --secondary-color: #FFFFFF; 
+  --secondary-dark: #4AFCFB;
+  --overlay: rgba(51, 51, 51, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Need to add font here: https://fonts.google.com/specimen/Montserrat*/
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a { 
+  text-decoration: none;
+}
+
+.button {
+  padding: 17px 28px;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+  text-transform: none;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--primary-dark);
+  border: 1px solid var(--primary-dark);
+}
+
+.line {
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin: 5px;
+  background-color: var(--primary-color);
+}
