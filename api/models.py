@@ -2,12 +2,12 @@ from django.db import models
 
 # Create your models here.
 class Order(models.Model):
-    order_id = models.IntegerField(primary_key=True)  # Primary key
-    user_id = models.ForeignKey(
-        'User', null=True, on_delete=models.SET_NULL)  # Many orders to one user ID
-    borrower_id = models.ForeignKey(
+    # Primary key order_id added by default
+    # user = models.ForeignKey(
+        # 'User', null=True, on_delete=models.SET_NULL)  # Many orders to one user ID
+    borrower = models.ForeignKey(
         'Borrower', null=True, on_delete=models.SET_NULL)  # Many orders to one borrower ID
-    book_id = models.ForeignKey(
+    book = models.ForeignKey(
         'Book', null=True, on_delete=models.SET_NULL)  # Many orders to one book ID
     status = models.CharField(max_length=50)
     created = models.DateTimeField(auto_now_add=True)   # Django's built-in
@@ -15,12 +15,12 @@ class Order(models.Model):
 
 
 class Borrower(models.Model):
-    borrower_id = models.IntegerField(primary_key=True)  # Primary key
+    # Primary key borrower_id added by default
     name = models.CharField(max_length=50)
 
 
 class Book(models.Model):
-    book_id = models.IntegerField(primary_key=True)  # Primary key
+    # Primary key book_id added by default
     title = models.CharField(max_length=100, null=False)
     authors = models.CharField(max_length=100)
     year = models.IntegerField()
@@ -31,5 +31,4 @@ class Book(models.Model):
     google_books_id = models.CharField(max_length=50)
 
 
-class User(models.Model):  # added temporarily to
-    user_id = 'testuser'  # stop errors when running server
+
