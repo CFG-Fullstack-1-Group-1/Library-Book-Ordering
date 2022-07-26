@@ -13,7 +13,8 @@ Run virtual environment:
 cd library-book-ordering
 source venv/bin/activate
 ```
-For windows
+Run virtual environment in Windows 10 
+(if the above doesn't work):
 ```
 py -m venv env
 .\env\Scripts\activate
