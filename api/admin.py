@@ -1,8 +1,20 @@
 from django.contrib import admin
-from .models import Order
+from .models import Order, Borrower, Book
 
 # Register your models here.
 class OrderAdmin(admin.ModelAdmin):
     list_display = ('id', 'borrower_id', 'book_id')
 
 admin.site.register(Order, OrderAdmin)
+
+
+class BorrowerAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name')
+
+admin.site.register(Borrower, BorrowerAdmin)
+
+
+class BookAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'authors')
+
+admin.site.register(Book, BookAdmin)
