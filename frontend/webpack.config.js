@@ -1,6 +1,10 @@
 const path = require("path");
 const webpack = require("webpack");
 
+
+// Debugged using {https://stackoverflow.com/questions/66772358/webpack-warning-warning-in-defineplugin-conflicting-values-for-process-env-no}
+// and https://stackoverflow.com/questions/55652077/css-file-causing-error-in-react-webpack-configuration
+
 module.exports = {
   entry: "./src/index.js",
   output: {
@@ -27,10 +31,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      "process.env": {
-        // This has effect on the react lib size
-        NODE_ENV: JSON.stringify("production"),
-      },
-    }),
+        'process.env.NODE_ENV' : JSON.stringify('development')
+    })
   ],
 };
