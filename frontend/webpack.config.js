@@ -14,7 +14,7 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
-        }
+        },
       },
       {
         test: /\.css$/,
@@ -22,14 +22,13 @@ module.exports = {
       },
     ],
   },
-}
   optimization: {
     minimize: true,
   },
   plugins: [
     new webpack.DefinePlugin({
       "process.env": {
-        // This reduces the react library size
+        // This has effect on the react lib size
         NODE_ENV: JSON.stringify("production"),
       },
     }),
