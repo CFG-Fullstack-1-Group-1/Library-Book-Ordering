@@ -19,6 +19,7 @@ The homepage provides a simple interface for the enduser to either log-in (Flow 
 
 If a user clicks on the labelled login button. A small pop-up will appear for the user, the Sales Team, to log into the Django Admin view to update any relevant databases and track orders.
 
+![Homepage Login Example](Wireframe-labelled/HomePageLoginFlow.png)![Homepage Login pop-up](Wireframe-labelled/LoginPage.1.png)
 ![Homepage](LabelledWireframe/HomePage.jpg)
 
 From this, they should then **Insert Eleanor's explaination here**
