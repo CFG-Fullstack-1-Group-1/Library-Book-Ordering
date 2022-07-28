@@ -32,14 +32,14 @@ The homepage's navigation bar has been made as the centre-front of the website f
 
 <img src="Wireframe-labelled/HomepageNavBarFlow.png" alt="HomepageNavBarFlow" width="500"/>
 
-#### **Flows 2 and 3 - Ordering a Book**
+### **Flows 2 and 3 - Ordering a Book**
 ### **Flow 2 Manual Order - Manually filling out a book order** 
 
 If the Librarian needs to order a book manually, an option has been designed for this. They can simply click on the 'Order' Tab and be directed to the order form to manually fill out and submit. The form is the exact same as the automatic order form and allows the same data to be sent to the Django Database for the Sales Team to process. If they confirm the order by clicking the highlighted button. The confirmation pages after a submitted order are highlighted below at the end of Flow 3. 
 
 <img src="Wireframe-labelled/Homepage-ManualOrderFlow.png" alt="Manual order flowchart" width="500"/><img src="Wireframe-labelled/ManualOrder.png" alt="Manual order form" width="500"/>
 
-### *****Flow 3 Search and order - using GoogleBooks API and then automatically filling the search form*****
+### **Flow 3 Search and order - using GoogleBooks API and then automatically filling the search form**
 
 The more relevant case is that the Librarian will be able to search for books using the search function. They can click on the 'Search' Tab' and be directed to a simplified search form that takes in 3 parameters that GoogleBooks API can process easily. This will then display a simplified search results page that displays the image, title, author, year and ISBN (10 or 13) of the available books. A Librarian can then click on their chosen result and it'll display some basic information for the Librarian to review. If they are satisfied with the specific book details, they can confirm their order. This will then automatically fill out the form with the chosen information. This is the same form as the manual form (shown in Flow 2) and allows the Librarian to proof-read and change any fields before submitting their order.
 
@@ -52,7 +52,7 @@ The more relevant case is that the Librarian will be able to search for books us
 
 If the order is successful, they will be shown a confirmation page. If the order is unsuccessful, they will be shown an error page. This is the same process for both Flow 2 and Flow 3. If the user clicks the 'OK' button, they will be redirected back to the home page.
 
-#### **Flows 4 and 5 - Static Pages**
+### **Flows 4 and 5 - Static Pages**
 
 The final pages a Librarian can use are the static pages created to provide additional support and information to the client. The 'About Us' and 'Contact Us' tabs will direct a user to these pages to allow a user to access any key information. For every page, if they click on the Requisit Logo, they're able to return to the Home Page and visit other parts of the website as needed.
 <img src="Wireframe-labelled/HomepageNavBarFlow.png" alt="HomepageNavBarFlow" width="500"/>
@@ -65,7 +65,7 @@ As a whole, the app has been designed with a simple flowchart in mind with the o
 Mobile designs have not been made as the project requirement and product usage specify that this process is done on a laptop or desktop rather than through mobile or tablet devices. As a further improvement to the wireframe if we had a longer project timeline is the development of a mobile app and the recommendation for libraries to use more tablets in their workplace. However, this website has been made in mind with the current capabilities and technology of a public library.
 
 # Design Choice Justifications
-#### Submit justifications for your design choices - are any good, are any bad? Why did you place x in y position?
+### Submit justifications for your design choices - are any good, are any bad? Why did you place x in y position?
 As part of the design and layout of the Library Book Ordering System, several stylistic and functional choices were made to suit the specific audience aforementioned.
 Because of the fully comprehesive wireframe, the most important features and stylistic choices will be explored below:
 
@@ -85,11 +85,10 @@ Because of the fully comprehesive wireframe, the most important features and sty
 <img src="DesignChoice/SearchFoundBook.png" alt="Found Book Page's Design Justification" width="500"/>
 
 ### 6 - Order Result
-<img src="DesignChoice/OrderFailed.png" alt="Failed Order Page's Design Justification" width="400"/>
-<img src="DesignChoice/OrderConfirmation.png" alt="Confirmed Order Page's Design Justification" width="400"/>
+<img src="DesignChoice/OrderFailed.png" alt="Failed Order Page's Design Justification" width="400"/> <img src="DesignChoice/OrderConfirmation.png" alt="Confirmed Order Page's Design Justification" width="300"/>
 
 # Colour Choice Justifications
-Submit justifications for your colour choices - are any good, are any bad? Why did you choose them?
+### Submit justifications for your colour choices - are any good, are any bad? Why did you choose them?
 
 # Design Heuristics
-How does your design meet the heuristics and principles we previously learnt? How do you meet or fail to meet each one?
+### How does your design meet the heuristics and principles we previously learnt? How do you meet or fail to meet each one?
