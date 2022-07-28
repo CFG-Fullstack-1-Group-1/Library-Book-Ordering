@@ -46,7 +46,7 @@ npm run dev
 ```
 **Note:** this watches for changes to the React folders and recompiles the bundled JavaScript file (Webpack/Babel).
 
-### Accessing the front-end of the app
+### Accessing the development server
 In the virtual environment terminal, there should be the following:
 ```
 Month DD, YYYY - HH:MM:SS
