@@ -18,7 +18,7 @@ The homepage provides a simple interface for the enduser to either log-in (Flow 
 
 ### **Flow 1 - Logging in and viewing the Django Admin and Database View**
 
-<img src="Wireframe-labelled/Homepage.png" alt="HomepageNavBarFlow" width="500"/>
+<img src="Wireframe-labelled/Homepage.png" alt="HomepageFlows" width="500"/>
 
 If a user clicks on the labelled login button. A small pop-up will appear for the user, the Sales Team, to log into the Django Admin view to update any relevant databases and track orders.
 
@@ -54,10 +54,15 @@ If the order is successful, they will be shown a confirmation page. If the order
 
 #### **Flows 4 and 5 - Static Pages**
 
-The final pages a Librarian can use are the static pages created to provide additional support and information to the client. The 'About Us' and 'Contact Us' tabs will direct a user to these pages to allow a user to access any key information. 
-<img src="Wireframe-labelled/Homepage.png" alt="HomepageNavBarFlow" width="500"/>
+The final pages a Librarian can use are the static pages created to provide additional support and information to the client. The 'About Us' and 'Contact Us' tabs will direct a user to these pages to allow a user to access any key information. For every page, if they click on the Requisit Logo, they're able to return to the Home Page and visit other parts of the website as needed.
+<img src="Wireframe-labelled/HomepageNavBarFlow.png" alt="HomepageNavBarFlow" width="500"/>
 
 <img src="Wireframe-labelled/AboutUs.png" alt="AboutUs" width="500"/><img src="Wireframe-labelled/ContactUs.png" alt="ContactUs" width="500"/>
+
+## Wirefram Conclusion
+As a whole, the app has been designed with a simple flowchart in mind with the opportunity for a Librarian and the Sales Team to use it as needed. Because this is a public sector app, the inention with the wireframe and flowcharts is to keep things as simple as possible to adhere to a wider variety of users. It's likely this website will be used by a variety of technical backgrounds and thus has been made as intutive as possible.
+
+Mobile designs have not been made as the project requirement and product usage specify that this process is done on a laptop or desktop rather than through mobile or tablet devices. As a further improvement to the wireframe if we had a longer project timeline is the development of a mobile app and the recommendation for libraries to use more tablets in their workplace. However, this website has been made in mind with the current capabilities and technology of a public library.
 
 # Design Choice Justifications
 Submit justifications for your design choices - are any good, are any bad? Why did you place x in y position?
