@@ -40,7 +40,11 @@ If the order is successful, they will be shown a confirmation page. If the order
 
 ![Confirmation and Error Page](LabelledWireframe/OrderConfirmationOrFailure.jpg)
 
-### **Flow 4 -
+### **Flows 4 and 5 - Static Pages**
+
+The final pages a Librarian can use are the static pages created to provide additional support and information to the client. The 'About Us' and 'Contact Us' tabs will direct a user to these pages to allow a user to access any key information. 
+
+![Static Pages](LabelledWireframe/StaticPages.jpg)
 
 ## Design Choice Justifications
 Submit justifications for your design choices - are any good, are any bad? Why did you place x in y position?
