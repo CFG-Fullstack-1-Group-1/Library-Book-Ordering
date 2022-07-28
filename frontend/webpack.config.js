@@ -1,12 +1,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const DEV_SERVER_PORT = 3001;
+const DEV_SERVER_PORT = 8080;
 
 module.exports = {
   entry: path.resolve(__dirname, "./src/index.js"),
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    static: path.join(__dirname, "dist"),
     port: DEV_SERVER_PORT,
   },
   output: {
