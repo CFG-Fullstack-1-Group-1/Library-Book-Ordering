@@ -1,7 +1,9 @@
 __pycache__/
 migrations
+venv
 
 # dependencies
+node_modules
 /node_modules
 /.pnp
 .pnp.js
@@ -23,3 +25,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+frontend/static/frontend/

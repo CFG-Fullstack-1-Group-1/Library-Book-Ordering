@@ -1,5 +1,5 @@
 import React from 'react';
-import whitelogo from './images/whitelogo.png';
+import whitelogo from '../../static/images/whitelogo.png';
 import WavesAnimation from './WavesAnimation';
 import './Hero.css';
 

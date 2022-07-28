@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 // Aesthetic imports
 import {FaBars, FaTimes} from 'react-icons/fa';
-import whitelogo from './images/whitelogo.png';
+import whitelogo from '../../static/images/whitelogo.png';
 import './Navbar.css'; 
 
 // Make changes to side menu with https://www.youtube.com/watch?v=CXa0f4-dWi4 
