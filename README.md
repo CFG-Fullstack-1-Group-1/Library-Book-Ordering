@@ -8,6 +8,11 @@ Make sure virtualenv is installed:
 pip install virtualenv
 ```
 
+Create virtual environment (if you don't have a `venv` folder):
+```
+python -m venv ./venv
+```
+
 Run virtual environment:
 ```
 cd library-book-ordering
@@ -18,6 +23,11 @@ Run virtual environment in Windows 10
 ```
 py -m venv env
 .\env\Scripts\activate
+```
+
+If that doesn't work try:
+```
+.\venv\Scripts\activate
 ```
 
 **Note:** `(venv)` should be at the start of each line in the terminal.
@@ -37,7 +47,7 @@ In terminal with virtual environment running:
 cd library-book-ordering
 python manage.py runserver
 ```
-**Note:** this runs the Django server.
+**Note:** this runs the Django server (and will run the front-end stuff).
 
 In a second terminal:
 ```
