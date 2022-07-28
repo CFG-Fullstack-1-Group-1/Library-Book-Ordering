@@ -59,13 +59,19 @@ The final pages a Librarian can use are the static pages created to provide addi
 
 <img src="Wireframe-labelled/AboutUs.png" alt="AboutUs" width="500"/><img src="Wireframe-labelled/ContactUs.png" alt="ContactUs" width="500"/>
 
-## Wirefram Conclusion
+## Wireframe Conclusion
 As a whole, the app has been designed with a simple flowchart in mind with the opportunity for a Librarian and the Sales Team to use it as needed. Because this is a public sector app, the inention with the wireframe and flowcharts is to keep things as simple as possible to adhere to a wider variety of users. It's likely this website will be used by a variety of technical backgrounds and thus has been made as intutive as possible.
 
 Mobile designs have not been made as the project requirement and product usage specify that this process is done on a laptop or desktop rather than through mobile or tablet devices. As a further improvement to the wireframe if we had a longer project timeline is the development of a mobile app and the recommendation for libraries to use more tablets in their workplace. However, this website has been made in mind with the current capabilities and technology of a public library.
 
 # Design Choice Justifications
-Submit justifications for your design choices - are any good, are any bad? Why did you place x in y position?
+#### Submit justifications for your design choices - are any good, are any bad? Why did you place x in y position?
+As part of the design and layout of the Library Book Ordering System, several stylistic and functional choices were made to suit the specific audience aforementioned.
+Because of the fully comprehesive wireframe, the most important features and stylistic choices will be explored below:
+
+### 1 - The Home Page
+<img src="DesignChoice/HomePage.png" alt="Home Page's Design Justification" width="500"/>
+
 
 # Colour Choice Justifications
 Submit justifications for your colour choices - are any good, are any bad? Why did you choose them?
