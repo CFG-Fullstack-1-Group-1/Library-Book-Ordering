@@ -72,6 +72,21 @@ Because of the fully comprehesive wireframe, the most important features and sty
 ### 1 - The Home Page
 <img src="DesignChoice/HomePage.png" alt="Home Page's Design Justification" width="500"/>
 
+### 2 - Static Pages
+<img src="DesignChoice/AboutUs.png" alt="About Us Page's Design Justification" width="500"/>
+
+### 3 - Order Form
+<img src="DesignChoice/OrderForm.png" alt="Order Form's Design Justification" width="500"/>
+
+### 4 - Search Results
+<img src="DesignChoice/Search Results.png" alt="Search Result's Design Justification" width="500"/>
+
+### 5 - Found Book Page
+<img src="DesignChoice/SearchFoundBook.png" alt="Found Book Page's Design Justification" width="500"/>
+
+### 6 - Order Result
+<img src="DesignChoice/OrderFailed.png" alt="Failed Order Page's Design Justification" width="400"/>
+<img src="DesignChoice/OrderConfirmation.png" alt="Confirmed Order Page's Design Justification" width="400"/>
 
 # Colour Choice Justifications
 Submit justifications for your colour choices - are any good, are any bad? Why did you choose them?
