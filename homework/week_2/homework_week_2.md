@@ -69,17 +69,30 @@ Mobile designs have not been made as the project requirement and product usage s
 As part of the design and layout of the Library Book Ordering System, several stylistic and functional choices were made to suit the specific audience aforementioned.
 Because of the fully comprehesive wireframe, the most important features and stylistic choices will be explored below:
 
+https://webdesign.tutsplus.com/articles/invisible-forces-alignment-direction-and-focus--cms-26954
+https://webdesign.tutsplus.com/articles/invisible-forces-size-contrast-and-balance--cms-26955
+https://webdesign.tutsplus.com/articles/invisible-forces-spacing-and-shape--cms-26956
+
 ### 1 - The Home Page
 <img src="DesignChoice/HomePage.png" alt="Home Page's Design Justification" width="500"/>
+When designed on a web browser, the home-page will only show the Hero section and no footer. This has been intended to allow for the most optimal Z-Layout on the page. The main two features we wanted to highlight was the Login Button (circled above) and the navigation bar at the end of the Z-shape. This specific format allows for these main key features to be followed by the user and allows quick and easy access to the most relevant features. Th usage of a background to separate the key pieces of information encourages a user to focus their eye-movement inside the Hero section of our home page. 
+
+As part of the design, the hero page looked considerably empty due to our aim of making the interface and colouring as accessible as possible to a public sector audience. As a solution, we aimed to fill the space without interupting the Z-layout by adding some slow moving waves at the bottom of the hero on the home page. 
+
+https://webdesign.tutsplus.com/articles/understanding-the-z-layout-in-web-design--webdesign-28
 
 ### 2 - Static Pages
 <img src="DesignChoice/AboutUs.png" alt="About Us Page's Design Justification" width="500"/>
+https://webdesign.tutsplus.com/articles/adding-space-to-your-designs--webdesign-14836
+https://webdesign.tutsplus.com/articles/building-consistency-and-relationships-into-your-designs--webdesign-14849
 
 ### 3 - Order Form
 <img src="DesignChoice/OrderForm.png" alt="Order Form's Design Justification" width="500"/>
+https://webdesign.tutsplus.com/articles/understanding-the-split-layout-in-web-design--webdesign-9551
 
 ### 4 - Search Results
-<img src="DesignChoice/Search Results.png" alt="Search Result's Design Justification" width="500"/>
+<img src="DesignChoice/SearchResults.png" alt="Search Result's Design Justification" width="500"/>
+https://webdesign.tutsplus.com/articles/understanding-the-f-layout-in-web-design--webdesign-687
 
 ### 5 - Found Book Page
 <img src="DesignChoice/SearchFoundBook.png" alt="Found Book Page's Design Justification" width="500"/>
@@ -89,6 +102,8 @@ Because of the fully comprehesive wireframe, the most important features and sty
 
 # Colour Choice Justifications
 ### Submit justifications for your colour choices - are any good, are any bad? Why did you choose them?
+
+https://webdesign.tutsplus.com/articles/understanding-the-qualities-and-characteristics-of-color--webdesign-13292 CTRL+F Blue
 
 # Design Heuristics
 ### How does your design meet the heuristics and principles we previously learnt? How do you meet or fail to meet each one?
