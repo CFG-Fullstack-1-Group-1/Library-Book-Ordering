@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const DEV_SERVER_PORT = 8080;
@@ -10,7 +11,8 @@ module.exports = {
     port: DEV_SERVER_PORT,
   },
   output: {
-    publicPath: "auto",
+    path: path.resolve(__dirname, "./static/frontend"),
+    filename: "[name].js",
   },
   resolve: {
     extensions: [".js", ".jsx"],
@@ -36,11 +38,15 @@ module.exports = {
       },
     ],
   },
+
   plugins: [
-    new HtmlWebpackPlugin({
-      manifest: "./public/manifest.json",
-      favicon: "./public/favicon.ico",
-      template: "./public/index.html",
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify("development"),
     }),
+    // new HtmlWebpackPlugin({
+    //   manifest: "./public/manifest.json",
+    //   favicon: "./public/favicon.ico",
+    //   template: "./public/index.html",
+    // }),
   ],
 };
