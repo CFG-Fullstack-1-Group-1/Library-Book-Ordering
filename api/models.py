@@ -20,11 +20,11 @@ class Order(models.Model):
 
 
 class Borrower(models.Model):
-    id = models.CharField(max_length=20, primary_key=True)
+    id = models.CharField(max_length=20, primary_key=True) # Non-autoincrementing primary key
     name = models.CharField(max_length=50)
 
     def __str__(self):
-        return f"{self.membership_number}: {self.name}"
+        return f"{self.id}: {self.name}"
 
 
 class Book(models.Model):
