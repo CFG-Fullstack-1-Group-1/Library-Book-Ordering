@@ -9,8 +9,12 @@
 </head>
 <body>
   <div id="main">
+    
+<!--   Makes sure it's allowing data to be sent from the back-end to the front-end
+  Stops any security issues and ensures the correct data is sent from the from vice versa-->
     {% csrf_token %}
     {% if not user.is_authenticated %}
+<!--  If a user is not logged in, they'll see the following pages, it's just a link right now but we can reformat that to a login page -->
     <a href="{% url 'login' %}"> Log In</a>
     {% else %}
     <a href="{% url 'logout' %}">Log Out</a>
