@@ -8,16 +8,28 @@ Make sure virtualenv is installed:
 pip install virtualenv
 ```
 
+Create virtual environment (if you don't have a `venv` folder):
+```
+python -m venv ./venv
+```
+
 Run virtual environment:
 ```
 cd library-book-ordering
 source venv/bin/activate
 ```
-For windows
+Run virtual environment in Windows 10 
+(if the above doesn't work):
 ```
 py -m venv env
 .\env\Scripts\activate
 ```
+
+If that doesn't work try:
+```
+.\venv\Scripts\activate
+```
+
 **Note:** `(venv)` should be at the start of each line in the terminal.
 
 ### Install dependencies
@@ -43,6 +55,17 @@ cd library-book-ordering/frontend
 npm run dev
 ```
 **Note:** this watches for changes to the React folders and recompiles the bundled JavaScript file (Webpack/Babel).
+
+### Accessing the development server
+In the virtual environment terminal, there should be the following:
+```
+Month DD, YYYY - HH:MM:SS
+Django version X.X.X, using settings 'library_book_ordering.settings'
+Starting development server at **http://127.0.0.1:8000/**
+...
+```
+You should either click or copy and paste the above highlighted link.
+Afterwards, you will be met wit a login screen to which the superuser details are shown below.
 
 ## Development Info
 
@@ -96,3 +119,8 @@ The frontend UI hosted at http://127.0.0.1:8000/
 - manage.py -> Django manager (used to access Django commands)
 - [requirements.txt](./requirements.txt) -> Python required packages file
 - venv -> virtual environment folder
+
+## Troubleshooting
+- Issues with downloading and running the Python Environment on Windows [click here](https://stackoverflow.com/questions/54312543/activate-venv-python-3-7-2-for-windows)
+- Issues with the webpack configurations and DefinePlugin values [click here](https://stackoverflow.com/questions/66772358/webpack-warning-warning-in-defineplugin-conflicting-values-for-process-env-no)
+- CSS Files causing an error with webpack [click here]( https://stackoverflow.com/questions/55652077/css-file-causing-error-in-react-webpack-configuration)
