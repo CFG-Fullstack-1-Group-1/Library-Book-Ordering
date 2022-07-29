@@ -142,6 +142,18 @@ For a successful order, the intention was to create a concise and useful design 
 
 ### Submit justifications for your colour choices - are any good, are any bad? Why did you choose them?
 
+Derivational colour combinations are understood as the selection of colours on the opposites sides of the colour wheel, which usually are complementary colours. Commonly, a cool colour will be combined with a warm colour, a colour to rise the contrasting and also complementary colour scheme. Per contra, in the colour theory is suggested that when composing colour schemes that are interconnected for your branding, it is essential to choose one colour which will be the core of the design.
+
+The understanding of the colour wheel and the way the colours are situated in it makes it easier to understand colour harmony, an essential element of colour theory. Having a look at the colour wheel you can easily find colour combinations which will be pleasing and elegant and forming a pleasingly consistent whole.
+To find the perfect colour balance is important to comprehend how contrast and light work. It is important the balance between light and dark.
+
+It is important to remark it is not just warm and cool-toned colours that alter your viewpoint, your judgement, but also different hues through the spectrum. Comprehension of what emotions different colours recall is advantageous when taking branding choices; that’s the main reason why brands focused on women are willing to understand the pink colour theory. Looking at examples of different brand colour palettes, you can build a combination of colours that recalls the idea of beauty, but also one that impacts in a positive way, relating to positive eomtions.
+
+The blue colour is usually linked to calm, serenity and trustworthiness; you can find lots of companies that use blue and complementary colours in their logo to transmit trust and calm. Blue transmits balance and stability to a brand, which makes it more attractive to customers, making them feel secure. That’s one of the main reasons why we can find those colours usually linked to banks (e.g. Barclays, RBS).
+
+As first-time creators, using blue was an easy decision since we would like to transmit serenity and trustworthiness. Those balanced colours gave us the perfect key to gain the confidence of future clients.
+
+
 https://webdesign.tutsplus.com/articles/understanding-the-qualities-and-characteristics-of-color--webdesign-13292 CTRL+F Blue
 
 # Design Heuristics
