@@ -43,10 +43,5 @@ module.exports = {
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("development"),
     }),
-    // new HtmlWebpackPlugin({
-    //   manifest: "./public/manifest.json",
-    //   favicon: "./public/favicon.ico",
-    //   template: "./public/index.html",
-    // }),
   ],
 };
