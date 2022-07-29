@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // Aesthetic imports
 import { FaBars, FaTimes } from "react-icons/fa";
 import whitelogo from "./whitelogo.png";
-import "./Navbar.css";
+import styles from "./Navbar.module.css";
 
 // Make changes to side menu with https://www.youtube.com/watch?v=CXa0f4-dWi4
 function Navbar() {
@@ -21,14 +21,18 @@ function Navbar() {
 
   // This is the actual layout and design of the website, please make any stylistic changes in Navbar.css and not in here.
   return (
-    <div className="header">
-      <nav className="navbar">
-        <Link to="/" className="navbar-logo">
-          <img className="navbar-whitelogo" src={whitelogo} alt="logo" />
+    <div className={styles["header"]}>
+      <nav className={styles["navbar"]}>
+        <Link to="/" className={styles["navbar-logo"]}>
+          <img
+            className={styles["navbar-whitelogo"]}
+            src={whitelogo}
+            alt="logo"
+          />
         </Link>
 
         {/* We've coded this to listen to a click function  and to then respond to it */}
-        <div className="hamburger" onClick={handleClick}>
+        <div className={styles["hamburger"]} onClick={handleClick}>
           {/* This will allow us to click and bring the cross out and then revert to the 3 bars if clicked again*/}
           {click ? (
             <FaTimes size={30} style={{ color: "#ffffff" }} />
@@ -40,34 +44,46 @@ function Navbar() {
         {/* If clicked, the actual side menu will come up with all the navigation options*/}
         {/* We're telling JS to either display the sidemenu on a click or show the regular navigation bar*/}
         <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+          <li className={styles["nav-item"]}>
+            <Link
+              to="/"
+              className={styles["nav-links"]}
+              onClick={closeMobileMenu}
+            >
               Home
             </Link>
           </li>
-          <li className="nav-item">
-            <Link to="/search" className="nav-links" onClick={closeMobileMenu}>
+          <li className={styles["nav-item"]}>
+            <Link
+              to="/search"
+              className={styles["nav-links"]}
+              onClick={closeMobileMenu}
+            >
               Search
             </Link>
           </li>
-          <li className="nav-item">
-            <Link to="/order" className="nav-links" onClick={closeMobileMenu}>
+          <li className={styles["nav-item"]}>
+            <Link
+              to="/order"
+              className={styles["nav-links"]}
+              onClick={closeMobileMenu}
+            >
               Order
             </Link>
           </li>
-          <li className="nav-item">
+          <li className={styles["nav-item"]}>
             <Link
               to="/about-us"
-              className="nav-links"
+              className={styles["nav-links"]}
               onClick={closeMobileMenu}
             >
               About Us
             </Link>
           </li>
-          <li className="nav-item">
+          <li className={styles["nav-item"]}>
             <Link
               to="/contact-us"
-              className="nav-links"
+              className={styles["nav-links"]}
               onClick={closeMobileMenu}
             >
               Contact Us

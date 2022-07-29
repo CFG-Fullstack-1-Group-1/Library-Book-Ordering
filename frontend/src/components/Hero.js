@@ -1,15 +1,19 @@
 import React from "react";
 import whitelogo from "./whitelogo.png";
 import WavesAnimation from "./WavesAnimation";
-import "./Hero.css";
+import styles from "./Hero.module.css";
 
 function Hero() {
   return (
-    <div className="container">
-      <div className="hero">
-        <div className="content">
+    <div className={styles["container"]}>
+      <div className={styles["hero"]}>
+        <div className={styles["content"]}>
           <p>
-            <img className="hero-whitelogo" src={whitelogo} alt="logo" />
+            <img
+              className={styles["hero-whitelogo"]}
+              src={whitelogo}
+              alt="logo"
+            />
           </p>
           <p>
             We are on a mission to re-invent the way you order your library
@@ -17,7 +21,7 @@ function Hero() {
           </p>
           <p>More text</p>
         </div>
-        <WavesAnimation className="waves" />
+        <WavesAnimation className={styles["waves"]} />
       </div>
     </div>
   );

@@ -3,16 +3,16 @@ import user1 from "./imgs/user1.jpeg";
 import user2 from "./imgs/user2.jpeg";
 import user3 from "./imgs/user3.jpeg";
 import user4 from "./imgs/user3.jpeg";
-import "./AboutUs.css";
+import styles from "./AboutUs.module.css";
 
 function AboutUs() {
   return (
-    <div className="AboutUs">
-      <div className="container">
+    <div className={styles["AboutUs"]}>
+      <div className={styles["container"]}>
         <h1>About Us</h1>
 
         {/* Edit stuff here by making a card component and then importing it into the webpage*/}
-        <div className="paragraph">
+        <div className={styles["paragraph"]}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
@@ -25,18 +25,18 @@ function AboutUs() {
             Morbi tincidunt ornare massa eget egestas purus viverra accumsan in.
           </p>
         </div>
-        <div className="content">
-          <div className="members-container">
-            <div className="card">
-              <img src={user1} className="teampic" alt="user1" />
+        <div className={styles["content"]}>
+          <div className={styles["members-container"]}>
+            <div className={styles["card"]}>
+              <img src={user1} className={styles["teampic"]} alt="user1" />
               <p>Paragraph 1</p>
               <p>
                 <span>Name 1</span>
               </p>
               <p>Experience 1</p>
             </div>
-            <div className="card">
-              <img src={user2} className="teampic" alt="user2" />
+            <div className={styles["card"]}>
+              <img src={user2} className={styles["teampic"]} alt="user2" />
               <p>Paragraph 2</p>
               <p>
                 <span>Name 2</span>
@@ -46,16 +46,16 @@ function AboutUs() {
           </div>
 
           <div className="members-container1">
-            <div className="card">
-              <img src={user3} className="teampic" alt="user3" />
+            <div className={styles["card"]}>
+              <img src={user3} className={styles["teampic"]} alt="user3" />
               <p>Paragraph 3</p>
               <p>
                 <span>Name 3</span>
               </p>
               <p>Experience 3</p>
             </div>
-            <div className="card">
-              <img src={user4} className="teampic" alt="user4" />
+            <div className={styles["card"]}>
+              <img src={user4} className={styles["teampic"]} alt="user4" />
               <p>Paragraph 4</p>
               <p>
                 <span>Name 4</span>
@@ -66,7 +66,7 @@ function AboutUs() {
         </div>
 
         {/* Edit stuff here */}
-        <div className="paragraph">
+        <div className={styles["paragraph"]}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
