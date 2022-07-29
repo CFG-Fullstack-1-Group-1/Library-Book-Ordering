@@ -153,9 +153,6 @@ The blue colour is usually linked to calm, serenity and trustworthiness; you can
 
 As first-time creators, using blue was an easy decision since we would like to transmit serenity and trustworthiness. Those balanced colours gave us the perfect key to gain the confidence of future clients.
 
-
-https://webdesign.tutsplus.com/articles/understanding-the-qualities-and-characteristics-of-color--webdesign-13292 CTRL+F Blue
-
 # Design Heuristics
 
 ### How does your design meet the heuristics and principles we previously learnt? How do you meet or fail to meet each one?
