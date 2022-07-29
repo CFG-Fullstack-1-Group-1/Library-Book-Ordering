@@ -11,7 +11,7 @@ class OrderSerializer(serializers.ModelSerializer):
 class BorrowerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Borrower
-        fields = ['id', 'membership_number', 'name']
+        fields = ['id', 'name']
 
 
 class BookSerializer(serializers.ModelSerializer):
