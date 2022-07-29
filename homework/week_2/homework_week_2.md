@@ -18,7 +18,7 @@ We have considered two types of users for this product, based on the information
 
 ## Homepage
 
-The homepage provides a simple interface for the enduser to either log-in (Flow 1), search and order a book (Flows 2-3), or to view any vital information (Flows 4-5).
+The homepage provides a simple interface for the end-user to either log-in (Flow 1), search and order a book (Flows 2-3), or to view any vital information (Flows 4-5).
 
 ### **Flow 1 - Logging in and viewing the Django Admin and Database View**
 
