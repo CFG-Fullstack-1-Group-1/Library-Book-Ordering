@@ -8,7 +8,7 @@ To access the original Figma wireframe for accessibility, please [click here](ht
 The full wireframe flowcart is available above. However, there is a breakdown below. 
 
 ## Users
-We have considered two types of users for this product, based on the information provided in the (project outline.)[https://github.com/CFG-Fullstack-1-Group-1/Library-Book-Ordering/blob/main/homework/week_1/homework_week_1.md]:
+We have considered two types of users for this product, based on the information provided in the [project outline](https://github.com/CFG-Fullstack-1-Group-1/Library-Book-Ordering/blob/main/homework/week_1/homework_week_1.md):
 - Librarians: These indviduals will be able to search and place orders for books. They can also manually fill out a form for self-published or unavailble books.
 - Sales Team: These individual will be able to view the current orders to see any book details to authorise and then order (if authorised). 
 
@@ -69,20 +69,16 @@ Mobile designs have not been made as the project requirement and product usage s
 As part of the design and layout of the Library Book Ordering System, several stylistic and functional choices were made to suit the specific audience aforementioned.
 Because of the fully comprehesive wireframe, the most important features and stylistic choices will be explored below:
 
-https://webdesign.tutsplus.com/articles/invisible-forces-alignment-direction-and-focus--cms-26954
-https://webdesign.tutsplus.com/articles/invisible-forces-size-contrast-and-balance--cms-26955
-https://webdesign.tutsplus.com/articles/invisible-forces-spacing-and-shape--cms-26956
 
 ### 1 - The Home Page
 <img src="DesignChoice/HomePage.png" alt="Home Page's Design Justification" width="500"/>
-When designed on a web browser, the home-page will only show the Hero section and no footer. This has been intended to allow for the most optimal Z-Layout on the page. The main two features we wanted to highlight was the Login Button (circled above) and the navigation bar at the end of the Z-shape. This specific format allows for these main key features to be followed by the user and allows quick and easy access to the most relevant features. Th usage of a background to separate the key pieces of information encourages a user to focus their eye-movement inside the Hero section of our home page. 
+When designed on a web browser, the home-page will only show the Hero section and no footer. This has been intended to allow for the most optimal Z-Layout on the page. The main two features we wanted to highlight was the Login Button (circled above) and the navigation bar at the end of the Z-shape. This specific format allows for these main key features to be followed by the user and allows quick and easy access to the most relevant features. Th usage of a background to separate the key pieces of information encourages a user to focus their eye-movement inside the Hero section of our home page. Usually with the Z-layout approach, there should be a giant call-to-action at the end of the Z. However, we've opted to make the call-to-action alongside the bottom of the Z flow to encourage 'title scanning'. This allows the user to have a variety of options to choose from. 
 
-As part of the design, the hero page looked considerably empty due to our aim of making the interface and colouring as accessible as possible to a public sector audience. As a solution, we aimed to fill the space without interupting the Z-layout by adding some slow moving waves at the bottom of the hero on the home page. 
-
-https://webdesign.tutsplus.com/articles/understanding-the-z-layout-in-web-design--webdesign-28
+As part of the design, the hero page looked considerably empty due to our aim of making the interface and colouring as accessible as possible to a public sector audience. As a solution, we aimed to fill the space without interupting the Z-layout by adding some slow moving waves at the bottom of the hero on the home page. We followed this clean layout by incorporating invisible spaces to allow for accessibility for a variety of screen sizes. This design allows the most important information, our login button and our navigation bar, to be presented in the most helpful format. Although we haven't followed a grid-style format, the harmonious sizing between the logo, tagline, and navigation bar allows for a cleaner layout whilst communication the key links clearly. 
 
 ### 2 - Static Pages
 <img src="DesignChoice/AboutUs.png" alt="About Us Page's Design Justification" width="500"/>
+The same principles used for The Home Page's invisible space has been applied to the static pages. However, we aimed to shape the layout in a grid-format and reduce the amount of negative space so the user has concise and clear information to read. For both these pages, we 
 https://webdesign.tutsplus.com/articles/adding-space-to-your-designs--webdesign-14836
 https://webdesign.tutsplus.com/articles/building-consistency-and-relationships-into-your-designs--webdesign-14849
 
