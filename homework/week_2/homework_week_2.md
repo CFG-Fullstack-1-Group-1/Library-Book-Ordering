@@ -107,3 +107,67 @@ https://webdesign.tutsplus.com/articles/understanding-the-qualities-and-characte
 
 # Design Heuristics
 ### How does your design meet the heuristics and principles we previously learnt? How do you meet or fail to meet each one?
+### Visibility of system status
+The user can always see which page they're on in the UI by a blue bar under the navigation bar link. There's also a confirmation page when the user successfully creates an order and an error page if the order isn't successfully created.
+
+### Match between the system and the real world
+We've avoided as much jargon as possible. Given that this application will be used by library staff, we decided that words like ISBN would be appropriate.
+
+We've tried to rephrase instructions to be as natural-sounding as possible, but we might need to do more work in this area. On the order confirmation page we say:
+
+> You should expect a status update in 3 to 5 business days.
+
+We could change 'status update' to 'response' or 'reply'.
+
+Book cover thumbnails are used on the search and book detail pages to anchor the abstract book details to the real-world object.
+
+We also use familiar icons for logging in, order confirmation and the order error message.
+
+### User control and freedom
+We have Back and Cancel buttons on the book details page and order page, so that users can easily exit those screens if they select the wrong book.
+
+### Consistency and standards
+We made sure to follow application conventions by using the keywords: Login, Search, Order, Send, Cancel and Back.
+
+We still need to carry out UI usability tests to make sure these behaviours are what the user expects. For example, the book details page has a Back button, whereas the order confirmation page has a Cancel button. It might not be clear to the user that both buttons take the user back to the search results.
+
+There is also some inconsistency between the layouts of our order confirmation and our order error message.
+
+### Error prevention
+The one main action that users can take that could result in an error is when they order a book. To do this users click the Order button, then get a specific order page with all the order fields in it. These fields can be edited and the user has to click Order again to complete the order. They also have the option to click Cancel. This gives the user time to double-check their order and also allows them to back out gracefully.
+
+### Recognition rather than recall
+Search, Order, About Us and Contact Us are visible in the navigation bar on every page. In addition, About Us, Contact Us and a helpdesk link are available in the footer of every page. This way it's clear what all of the user's options are and they don't have to memorise them.
+
+### Flexibility and efficiency of use
+We don't currently have any options for advanced users. If we have time, we would like to implement an advanced search option that can be toggled on the search page. This would allow the user to search by category in addition to title, author and publisher. They would also be able to order the results by most recent instead of by relevance.
+
+### Aesthetic and minimalist design
+Each page is streamlined and contains only the elements that are required to complete the task.
+
+- The homepage is a landing page containing the navigation bar links.
+- The about us page has room for a small amount of team information.
+- The contact us and search pages just contain the contact and search forms respectively.
+- The search results page contains the minimum information needed about each book to distinguish it from the other results.
+- The book details page contains only the information needed to confirm that it's the correct book.
+- The order page contains only the form needed to create an order.
+- The order confirmation page contains a confirmation message, an expected ETA and basic information on the book ordered.
+- Optional information and links are contained in the footer, where they have less relative impact but they are still accessible to the user.
+
+### Help users recognise, diagnose and recover from errors
+We currently have an order error message that is displayed when an order hasn't been created successfully. It contains a prominent icon that suggests an error has taken place and will attract the user's attention to the error message.
+
+> Your error could not be processed.
+> 
+> There was an error submitting your order.
+> Please try again later.
+
+This message briefly explains the error to the user and suggests a possible solution, that they try again.
+
+If we have time, we also plan to create pages or UI elements to deal with the following errors:
+- page not found
+- no search results found
+- form validation errors (log in, contact us, order page)
+
+### Help and documentation
+We've decided that the system is simple enough that no documentation is required, but we have included a link to the library's helpdesk in the footer of every page.
