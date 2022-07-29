@@ -133,6 +133,7 @@ As mentioned before, we went with a spacing and simplicity option to ensure that
 ### 6 - Order Result
 
 <img src="DesignChoice/OrderFailed.png" alt="Failed Order Page's Design Justification" width="400"/> <img src="DesignChoice/OrderConfirmation.png" alt="Confirmed Order Page's Design Justification" width="300"/>
+
 For both order results, the main aim is to create a comprehensive piece for both options.
 
 For a successful order, the intention was to create a concise and useful design that has all the key information a Librarian would need. The design of the box itself uses the Z-layout to ensure there is maximum efficiency for information absorption and an easy format to move-on from the confirmation. The same intention has been used for the unsuccessful order confirmation. However, a more simple approach has been used with a clear icon to highlight to the user an error has occurred. There is also a yellow background added to ensure they're aware it's an error. If a blue background was used for this, the error message may not be conveyed with the same urgency. 
