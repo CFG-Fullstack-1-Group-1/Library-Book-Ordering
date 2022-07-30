@@ -1,8 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
 
-const DEV_SERVER_PORT = 8080;
-
 module.exports = {
   entry: path.resolve(__dirname, "./src/index.js"),
   output: {
