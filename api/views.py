@@ -1,6 +1,13 @@
 from django.http import HttpResponse, JsonResponse
-from rest_framework import viewsets
+from rest_framework import viewsets, generics
 from .serializers import OrderSerializer, Order
+# from .models import Book
+# from rest_framework.response import Response
+# from django.shortcuts import render
+# from django.http.response import JsonResponse
+# from rest_framework.parsers import JSONParser
+# from rest_framework.decorators import api_view 
+# from rest_framework import status
 
 # Welcome message at /api
 def main(request):
@@ -120,7 +127,86 @@ def books(request):
   ]
 })
 
+class OrderDetail():
+  pass
+
 # Provides access to Order table at /api/orders
 class OrderViewSet(viewsets.ModelViewSet):
     serializer_class = OrderSerializer
     queryset = Order.objects.all()
+
+    #depth=1
+
+    # def create(self, request, *args, **kwargs):
+    #   order_data = request.data
+    #   print(f"Look here for order_data => => => {order_data}")
+    #   new_order = Order.objects.create(book=Book.objects.get(order_data['book']), status=order_data['status'], created=order_data['created'], modified=order_data['modified'])
+
+    #   new_order.save()
+
+    #   serializer = OrderSerializer(new_order)
+
+    #   return Response(data=serializer.data)
+
+# @api_view(['GET', 'POST', 'DELETE'])
+# def new_order(request):
+#   if request.method == 'GET':
+#     orders = Order.objects.all()
+#     orders_serializer = OrderSerializer(orders, many=True)
+#     return JsonResponse(orders_serializer.data, safe=False)
+#   elif request.method == 'POST':
+#     order_data = JSONParser().parse(request)
+#     orders_serializer = OrderSerializer(data=order_data)
+#     if orders_serializer.is_valid():
+#       orders_serializer.save()
+#       return JsonResponse(orders_serializer.data, status=status.HTTP_201_CREATED)
+#     return JsonResponse(orders_serializer.errors, stats=status.HTTP_400_BAD_REQUEST)
+    # title = request.POST['book']['title']
+    # authors = request.POST['book']['authors']  
+  # elif request.method == 'DELETE':
+  #     count = Order.objects.all().delete()
+  #     return JsonResponse({'message': 'Deleted'.format(count[0])}, status=status.HTTP_204_NO_CONTENT)
+
+    # importing the necessary libraries
+# from django.shortcuts import render
+# from app1.models import Registration
+
+# def registered(request):
+#       first_name = request.POST['fn']
+#       last_name = request.POST['ln']
+#       email = request.POST['email']
+#       password = request.POST['password']
+      
+#       person = Registration(first_name=first_name, last_name= last_name, email= email, password = password)
+#       person.save()   
+#       return render(request, 'registered.html', {'fn':first_name})
+
+class OrderList(generics.ListCreateAPIView):
+  queryset = Order.objects.all()
+  serializer_class = OrderSerializer
+  
+
+class OrderDetail(generics.RetrieveUpdateDestroyAPIView):
+  queryset = Order.objects.all()
+  serializer_class = OrderSerializer
+  pass
+
+class CreateOrder(generics.CreateAPIView):
+  # permission_classes = [permissions.IsAuthenticated]
+  queryset = Order.objects.all()
+  serializer_class = OrderSerializer
+
+class AdminOrderDetail(generics.RetrieveAPIView):
+  # permission_classes = [permissions.IsAuthenticated]
+  queryset = Order.objects.all()
+  serializer_class = OrderSerializer
+
+class EditOrder(generics.UpdateAPIView):
+  # permission_classes = [permissions.IsAuthenticated]
+  queryset = Order.objects.all()
+  serializer_class = OrderSerializer
+
+class DeleteOrder(generics.DestroyAPIView):
+  # permission_classes = [permissions.IsAuthenticated]
+  queryset = Order.objects.all()
+  serializer_class = OrderSerializer

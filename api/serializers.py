@@ -1,13 +1,6 @@
 from rest_framework import serializers
 from .models import Order, Borrower, Book
 
-class OrderSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Order
-        fields = ['id', 'borrower_id',
-                  'book_id', 'status', 'created', 'modified']
-
-
 class BorrowerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Borrower
@@ -19,3 +12,22 @@ class BookSerializer(serializers.ModelSerializer):
         model = Book
         fields = ['id', 'title', 'authors', 'year', 'publisher',
                   'category', 'isbn_10', 'isbn_13', 'google_books_id']
+
+
+class OrderSerializer(serializers.ModelSerializer):
+    book = BookSerializer()
+    borrower = BorrowerSerializer()
+
+    def create(self, request):
+        borrower_data = request.pop('borrower')
+        book_data = request.pop('book')
+        order = Order.objects.create(**request) # Must be configured to 
+        Borrower.objects.create(**borrower_data)
+        Book.objects.create(**book_data)
+        return order
+
+
+    class Meta:
+        model = Order
+        fields = ['id', 'borrower',
+                  'book', 'status', 'created', 'modified']

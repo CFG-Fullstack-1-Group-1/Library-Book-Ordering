@@ -11,9 +11,10 @@ class Order(models.Model):
     book = models.ForeignKey(
         'Book', null=True, on_delete=models.SET_NULL, related_name="orders")  # Many orders to one book ID
     StatusChoice = models.TextChoices('StatusChoice', 'Pending Ordered Declined')
-    status = models.CharField(max_length=40, choices=StatusChoice.choices)
+    status = models.CharField(max_length=40, choices=StatusChoice.choices, default='Pending')
     created = models.DateTimeField(auto_now_add=True)   # Django's built-in
     modified = models.DateTimeField(auto_now=True)      # DateTime feature
+    objects = models.Manager()
 
     def __str__(self):
         return f"{self.id}: {self.book}"
