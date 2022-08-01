@@ -13,8 +13,8 @@ function TestPage() {
   });
 
   // Get book details from Django API.
-  function getBook() {
-    fetch("/api/book/")
+  function getBook(google_books_id) {
+    fetch(`/api/book/${google_books_id}/`)
       .then((res) => {
         if (!res.ok) {
           throw Error("Could not fetch book data");
@@ -27,10 +27,12 @@ function TestPage() {
   }
 
   // Get book search from Django API.
-  function getBooks() {
-    fetch("/api/books/")
+  function getBooks(search_term) {
+    fetch(`/api/books/?q=${search_term}`)
       .then((res) => {
         if (!res.ok) {
+          console.log(search_term)
+          console.log(`/api/books/?q=${search_term}`)
           throw Error("Could not fetch book list data");
         }
         return res.json();
@@ -87,7 +89,8 @@ function TestPage() {
 
   return (
     <div>
-      <button onClick={() => getBook()}>Book details</button>
+      <input type='text' placeholder='Google books id' id='google_books_id'></input>
+      <button onClick={() => getBook(document.querySelector('#google_books_id').value)}>Book details</button>
       {book && (
         <div id="book-details">
           <h1>{book.title}</h1>
@@ -102,7 +105,8 @@ function TestPage() {
         </div>
       )}
 
-      <button onClick={() => getBooks()}>Book search</button>
+<input type='text' placeholder='Search term' id='search_term'></input>
+      <button onClick={() => getBooks(document.querySelector('#search_term').value)}>Book search</button>
       {books && (
         <div id="book-search">
           <ul>{books}</ul>
