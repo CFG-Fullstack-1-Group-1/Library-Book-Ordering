@@ -1,7 +1,7 @@
 from xml.etree.ElementInclude import include
 from django.urls import path, include
 from rest_framework import routers
-from .views import book, books, main, OrderViewSet, OrderList, OrderDetail, CreateOrder
+from .views import book, books, main, OrderViewSet
 
 router = routers.DefaultRouter()
 router.register(r'orders', OrderViewSet)
