@@ -4,6 +4,7 @@ from .serializers import OrderSerializer, Order
 from .util import get_book_details, get_books
 from django.utils.datastructures import MultiValueDictKeyError
 
+
 # Welcome message at /api
 def main(request):
     return HttpResponse('Welcome! Try /api/books /api/book or /api/orders')
@@ -32,6 +33,9 @@ def books(request):
   }
 })
     return JsonResponse(get_books(q))
+
+class OrderDetail():
+  pass
 
 # Provides access to Order table at /api/orders
 class OrderViewSet(viewsets.ModelViewSet):

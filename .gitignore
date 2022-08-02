@@ -1,5 +1,4 @@
 __pycache__/
-migrations
 venv
 
 # dependencies
@@ -26,3 +25,5 @@ yarn-debug.log*
 yarn-error.log*
 
 frontend/static/frontend/
+.vscode/
+.package-lock.json
