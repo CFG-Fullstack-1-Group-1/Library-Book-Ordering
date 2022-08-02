@@ -50,6 +50,7 @@ function TestPage() {
                   <p className="result-info">{`Year ${book.publishedDate}`}</p>
                   <p className="result-info">{`ISBN 10 ${book.isbn_10}`}</p>
                   {/* Connect GoogleBooks ID To this specific button and create a link to an overlay or page for it */}
+                  {/* Use logic from lines 12-24 and lines 92-93 from TestPage.js*/}
                   <button className="form-input-btn">More Details</button>
                 </div>
               </div>
