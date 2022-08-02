@@ -48,16 +48,16 @@ class OrderSerializer(serializers.ModelSerializer):
     def create(self, request):
         # Populates Borrower table with borrower data provided in request
         borrower_data = request.pop('borrower')
-        b1 = Borrower(**borrower_data)
-        borrower_save = b1.save(force_insert=True)
+        borrower_save = Borrower(**borrower_data)
+        borrower_save.save(force_insert=True)
 
         # Populates Book table with book data provided in request
         book_data = request.pop('book')      
-        b2 = Book(**book_data)
-        book_save = b2.save(force_insert=True)
+        book_save = Book(**book_data)
+        book_save.save(force_insert=True)
         
         # Populates Order table with Order data (status, created, modified) from the request, then obtains and populates Foreign key fields book_id and borrower_id from respective tables
-        order_data = Order.objects.create(borrower = borrower_save.id, book = book_save.id, **request)        
+        order_data = Order.objects.create(borrower = borrower_save, book = book_save, **request)        
         return order_data
 
     class Meta:
