@@ -2,6 +2,7 @@ import React from 'react';
 import useSearchForm from './useSearchForm';
 import validateSearchInfo from './validateSearchInfo';
 import './SearchForm.css';
+import { BookSearch } from "./BookSearch";
 {/* Validation React Hook Tutorial Using by Brian Design from https://youtu.be/KGFG-yQD7Dw?t=767 */}
 
 
@@ -72,7 +73,7 @@ function SearchForm() {
 
         <button 
         className="form-input-btn"
-        type='submit'>
+        type='submit' onClick={() => BookSearch('cat')}>
           Search 
         </button>
         
