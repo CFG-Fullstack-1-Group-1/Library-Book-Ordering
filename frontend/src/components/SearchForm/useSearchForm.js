@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import validateInfo from './validateSearchInfo';
+import validateSearchInfo from './validateSearchInfo';
 
 const useSearchForm = validateSearchInfo => {
 

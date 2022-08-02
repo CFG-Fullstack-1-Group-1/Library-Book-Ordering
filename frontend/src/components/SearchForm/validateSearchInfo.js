@@ -1,4 +1,4 @@
-export default function validateInfo(values) {
+export default function validateSearchInfo(values) {
     let errors = {};
 
     // This will tell the user that they need to input the below key values to search properly (Title, Author, Year)
