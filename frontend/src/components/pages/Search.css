@@ -13,6 +13,9 @@
  text-align: center;
 }
 
-.SearchPage .searchpage-container .form-container {
-    width: 70%;
+.SearchPage .searchpage-container .searchpage-info h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--primary-dark);
 }
+

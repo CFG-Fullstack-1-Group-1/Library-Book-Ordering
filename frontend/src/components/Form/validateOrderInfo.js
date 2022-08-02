@@ -15,17 +15,17 @@ export default function validateInfo(values) {
     // Year
     if(!values.year.trim()) {
         errors.year = "*Year of Book Published required";
-    } else if (values.year.length < 4) {
+    } else if (values.year.length !== 4) {
         errors.year = '*Please input a valid Year';
     }
 
     // //  Valid ISBN10
-    // if (values.ISBN10.length < 10) {
+    // if (values.ISBN10.length > 10) {
     //     errors.ISBN10 = 'Please inpit a valid ISBN10 that is 10 numbers long';
     // }
 
     // // Valid ISBN13
-    // if (values.ISBN13.length < 13) {
+    // if (values.ISBN13.length > 13) {
     //     errors.ISBN13 = 'Please inpit a valid ISBN13 that is 13 numbers long';
     // }
 

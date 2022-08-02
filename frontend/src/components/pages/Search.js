@@ -1,5 +1,5 @@
-import React from 'react'
-import Form from '../Form/Form'
+import React from 'react';
+import SearchForm from '../SearchForm/SearchForm';
 import './Search.css';
 
 function Search() {
@@ -9,11 +9,9 @@ function Search() {
         <div className='searchpage-container'>
           <div className='searchpage-info'>
             <h1>Search</h1>
-              <p>insert info here</p>
+            <h3>Please fill in the details of the book you'd like to search for</h3>
           </div>
-            <div className='form-container'>
-                <Form/>
-            </div>    
+            <SearchForm/>
         </div>
       </div>
     
@@ -21,4 +19,4 @@ function Search() {
   )
 }
 
-export default Search
+export default Search;
