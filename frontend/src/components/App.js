@@ -29,7 +29,6 @@ function App() {
         </Routes>
       </Router>
 
-      {/* Remove these later */}
       <Footer/>
     </div>
   );
