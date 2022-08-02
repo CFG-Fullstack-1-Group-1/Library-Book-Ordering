@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import OrderForm from '../Form/OrderForm';
 
 function Order() {
   return (
@@ -8,7 +9,8 @@ function Order() {
                 <h1>Order</h1>
 
                     <div className='paragraph'>
-                    <p>insert info here</p>
+                    <h3>Please input the order details for the requested book</h3>
+                    <OrderForm/>
                     </div>
 
             </div>
@@ -18,4 +20,4 @@ function Order() {
   )
 }
 
-export default Order
+export default Order;

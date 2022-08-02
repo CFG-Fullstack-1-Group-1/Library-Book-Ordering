@@ -8,7 +8,7 @@ router.register(r'orders', OrderViewSet)
 
 urlpatterns = [
     path('', main),
-    path('book/', book),
+    path('book/<google_books_id>/', book),
     path('books/', books),
     path('', include(router.urls)),
 ]

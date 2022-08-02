@@ -1,23 +1,23 @@
 import React from 'react';
-import useForm from './useForm';
-import validateInfo from './validateInfo';
-import './Form.css';
+import useOrderForm from './useOrderForm';
+import validateOrderInfo from './validateOrderInfo';
+import './OrderForm.css';
 {/* Validation React Hook Tutorial Using by Brian Design from https://youtu.be/KGFG-yQD7Dw?t=767 */}
 
 
-function Form() {
+function OrderForm() {
 
-  const {handleChange, values, handleSubmit, errors} = useForm(validateInfo);
+  const {handleChange, values, handleSubmit, errors} = useOrderForm(validateOrderInfo);
 
   return (
-    <div className="form-content-right">
+    <div className="form-container">
+    <div className="form-content">
 
       <form action="" className="form" onSubmit={handleSubmit}>
-        <h1>Please fill in the details of the book you'd like to search for:</h1>
 
 {/* Indvidual codeblock for  each form box input*/}
 {/* Input for Book title */}
-        <div className="form-inputs">
+        <div className=" form-inputs">
           <label 
           htmlFor="title" 
           className="form-label">
@@ -81,6 +81,7 @@ function Form() {
           htmlFor="Publisher" 
           className="form-label">
             <p>Publisher</p>
+          </label>
             <input 
             id='Publisher'
             type="text" 
@@ -88,7 +89,6 @@ function Form() {
             className="form-input" 
             placeholder='Publisher of Book'
             />
-          </label>
         </div>
 
 {/* Input for Category */}
@@ -97,6 +97,7 @@ function Form() {
           htmlFor="Category" 
           className="form-label">
             <p>Category</p>
+          </label>
             <input 
             id='Category'
             type="text" 
@@ -104,7 +105,6 @@ function Form() {
             className="form-input" 
             placeholder='Category of Book'
             />
-          </label>
         </div>
 
 {/* Input for ISBN10 */}
@@ -113,6 +113,7 @@ function Form() {
           htmlFor="ISBN10" 
           className="form-label">
             <p>ISBN10</p>
+          </label>
             <input 
             id='ISBN10'
             type="number" 
@@ -122,7 +123,6 @@ function Form() {
             className="form-input" 
             placeholder='ISBN10 of Book'
             />
-          </label>
         </div>
 
 {/* Input for ISBN13 */}
@@ -131,6 +131,7 @@ function Form() {
           htmlFor="ISBN13" 
           className="form-label">
             <p>ISBN13</p>
+          </label>
             <input 
             id='ISBN13'
             type="number" 
@@ -140,49 +141,55 @@ function Form() {
             className="form-input" 
             placeholder='ISBN13 of Book'
             />
-          </label>
         </div>
  
  {/* Use this for the ORDER FORM NOT SEARCH FORM */}
 {/* Input for Borrower ID */}
-{/* <div className="form-inputs">
+<div className="form-inputs">
           <label 
           htmlFor="Borrower ID" 
           className="form-label">
             <p>Borrower ID</p>
+          </label>
             <input 
             type="number" 
             name='Borrower ID'
             className="form-input" 
             placeholder='Borrower ID'
             />
-          </label>
-        </div> */}
+        </div>
 
 {/* Input for Borrower Name */}
-{/* <div className="form-inputs">
+<div className="form-inputs">
           <label 
           htmlFor="Borrower Name" 
           className="form-label">
             <p>Borrower Name</p>
+          </label>
             <input 
             type="text" 
             name='Borrower Name'
             className="form-input" 
             placeholder='Borrower Name'
             />
-          </label>
-        </div>  */}
+        </div> 
 
         <button 
         className="form-input-btn"
         type='submit'>
           Search 
         </button>
+
+        <button 
+        className="form-input-btn">
+          Cancel 
+        </button>
+        
         
       </form>
     </div>
+  </div>
   )
 }
 
-export default Form
+export default OrderForm;
