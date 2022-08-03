@@ -3,33 +3,9 @@ import user1 from "../../../static/images/user1.jpeg";
 import user2 from "../../../static/images/user2.jpeg";
 import user3 from "../../../static/images/user3.jpeg";
 import user4 from "../../../static/images/user4.png";
-import arrowUp from "./arrow_up.svg";
-import arrowDown from "./arrow_down.svg";
 import "./AboutUs.css";
-
-function Card(props) {
-  return <div className="card">{props.children}</div>;
-}
-
-function AboutUsProfile({ pic, name, shortDescription, description }) {
-  const [showFull, setShowFull] = useState(false);
-
-  function onClickHandler() {
-    setShowFull((showFull) => !showFull);
-  }
-
-  return (
-    <Card>
-      <img src={pic} className="teampic" alt="user1" />
-      <p>
-        <span>{name}</span>
-      </p>
-      <p>{shortDescription}</p>
-      <img onClick={onClickHandler} src={showFull ? arrowDown : arrowUp} />
-      {showFull && <p>{description}</p>}
-    </Card>
-  );
-}
+import Card from "../AboutUs/Card";
+import AboutUsProfile from "../AboutUs/AboutUsProfile";
 
 function AboutUs() {
   return (

@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
-   sodipodi:docname="arrow_up.svg"
+   sodipodi:docname="arrow_down.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -51,8 +51,8 @@
      id="layer1"
      transform="translate(-49.221138,-97.096512)">
     <path
-       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 51.221138,143.33658 99.7573,99.757302 150.56536,143.33658"
+       style="fill:none;stroke:#0348a4;stroke-width:9;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 51.221138,98.270524 99.7573,141.8498 150.56536,98.270524"
        id="path876"
        sodipodi:nodetypes="ccc" />
   </g>

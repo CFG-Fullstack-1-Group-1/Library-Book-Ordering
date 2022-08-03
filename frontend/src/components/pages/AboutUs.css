@@ -1,6 +1,5 @@
 .AboutUs {
     width: 100%;
-
 }
 
 .AboutUs .container {
@@ -37,7 +36,7 @@
 
 .AboutUs .teampic {
     border-radius: 60px;
-    margin-top: -6rem;
+    margin-top: -4rem;
     margin-left: 40%;
     width: 110px;
     height: auto;
@@ -53,6 +52,12 @@
     color: var(--primary-color);
     font-size: 1rem;
     font-weight: 700;
+}
+
+.AboutUs-arrow {
+    width: 1.5rem;
+    margin: auto;
+    display: block;
 }
 
 @media screen and (max-width: 940px) {
