@@ -16,6 +16,7 @@ import ContactUs from './pages/ContactUs';
 import Footer from './Footer';
 
 function App() {
+  console.log("Here");
   return (
     <div>
       <Router>

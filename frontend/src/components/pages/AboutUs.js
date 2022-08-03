@@ -7,12 +7,12 @@ import './AboutUs.css';
 
 function AboutUs() {
     return (
-      <div className="aboutUs">
-        <div className="aboutUs-container">
+      <div className="AboutUs">
+        <div className="container">
           <h1>About Us</h1>
 
           {/* Edit stuff here by making a card component and then importing it into the webpage*/}
-          <div className="aboutUs-paragraph">
+          <div className="paragraph">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
@@ -26,18 +26,18 @@ function AboutUs() {
               purus viverra accumsan in.
             </p>
           </div>
-          <div className="aboutUs-content">
+          <div className="content">
             <div className="members-container">
-              <div className="aboutUs-card">
-                <img src={user1} className="teampic1" alt="user1" />
+              <div className="card">
+                <img src={user1} className="teampic" alt="user1" />
                 <p>Paragraph 1</p>
                 <p>
                   <span>Name 1</span>
                 </p>
                 <p>Experience 1</p>
               </div>
-              <div className="aboutUs-card">
-                <img src={user2} className="teampic2" alt="user2" />
+              <div className="card">
+                <img src={user2} className="teampic" alt="user2" />
                 <p>Paragraph 2</p>
                 <p>
                   <span>Name 2</span>
@@ -47,16 +47,16 @@ function AboutUs() {
             </div>
 
             <div className="members-container1">
-              <div className="aboutUs-card">
-                <img src={user3} className="teampic3" alt="user3" />
+              <div className="card">
+                <img src={user3} className="teampic" alt="user3" />
                 <p>Paragraph 3</p>
                 <p>
                   <span>Name 3</span>
                 </p>
                 <p>Experience 3</p>
               </div>
-              <div className="aboutUs-card">
-                <img src={user4} className="teampic4" alt="user4" />
+              <div className="card">
+                <img src={user4} className="teampic" alt="user4" />
                 <p>Paragraph 4</p>
                 <p>
                   <span>Name 4</span>
