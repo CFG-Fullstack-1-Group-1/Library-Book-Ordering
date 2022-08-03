@@ -16,22 +16,21 @@ import ContactUs from './pages/ContactUs';
 import Footer from './Footer';
 
 function App() {
-  console.log("Here");
   return (
     <div>
       <Router>
-        <Navbar/>
+        <Navbar />
         <Routes>
-          <Route exact path="/" element={<Home/>} />
-          <Route path="/search" element={<Search/>} />
-          <Route path="/order" element={<Order/>} />
-          <Route path="/about-us" element={<AboutUs/>} />
-          <Route path="/contact-us" element={<ContactUs/>} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/order" element={<Order />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
       </Router>
 
       {/* Remove these later */}
-      <Footer/>
+      <Footer />
     </div>
   );
 }
