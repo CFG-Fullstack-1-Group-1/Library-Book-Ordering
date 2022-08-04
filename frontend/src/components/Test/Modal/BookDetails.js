@@ -25,8 +25,8 @@ function BookDetails({ book, closeBookDetails }) {
           </div>
           <p>Description</p>
           <p className="book-description">{`${book.description}`}</p>
-          <button onClick={() => closeBookDetails(false)}>Cancel</button>
-          <button>Book details</button>
+          <button className='bookdetails-cancel-btn' onClick={() => closeBookDetails(false)}>Cancel</button>
+          <button className='bookdetails-btn'>Book details</button>
         </div>
       </div>
     </>

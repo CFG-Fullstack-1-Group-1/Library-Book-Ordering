@@ -1,6 +1,6 @@
 import React from "react";
 
-function TestCard({ books }) {
+function TestCard({ book }) {
   return (
     <div>
       <li key={book.google_books_id}>

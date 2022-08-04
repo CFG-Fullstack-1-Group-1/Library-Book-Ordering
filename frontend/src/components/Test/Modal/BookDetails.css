@@ -61,10 +61,57 @@
   margin-top: 0.5rem;
   text-align: justify;
   font-size: 16px;
-  width: 80ch;
+  width: 65ch;
   display: block;
-  width: 100px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.overlay .overlay-inner .bookdetails-btn {
+  position: relative;
+  width: fit-content;
+  height: 40px;
+  top: 1rem;
+  right: 1rem;
+  outline: none;
+  border: none;
+  font-size: 100%;
+  background-color: var(--primary-dark);
+  border-radius: 50px;
+  color: white;
+}
+
+.overlay .overlay-inner .bookdetails-btn:hover {
+  color: var(--primary-dark);
+  background-color: white;
+  outline: auto;
+  border: auto;
+  border-color: var(--primary-dark);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.overlay .overlay-inner .bookdetails-cancel-btn {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  top: 1rem;
+  right: 1rem;
+  outline: none;
+  border: none;
+  font-size: 100%;
+  background-color: red;
+  border-radius: 50px;
+  color: black;
+}
+
+.overlay .overlay-inner .bookdetails-cancel-btn:hover {
+  color: black;
+  background-color: white;
+  outline: auto;
+  border: auto;
+  border-color: red;
+  cursor: pointer;
+  transform: scale(1.1);
 }
