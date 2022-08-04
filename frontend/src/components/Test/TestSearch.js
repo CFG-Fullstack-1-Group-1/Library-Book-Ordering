@@ -40,7 +40,7 @@ function TestPage() {
         // This is what is shown on the search results tab
         setBooks(
           data.results.map((book) => (
-            <div >
+            <div>
               <li key={book.google_books_id}>
                 <div className="bookresults-card">
                   <img
@@ -57,16 +57,16 @@ function TestPage() {
                       className="bookresults-btn"
                       onClick={() => {
                         fetch(`/api/book/${book.google_books_id}/`)
-                        .then((res) => {
-                          if (!res.ok) {
-                            throw Error("Could not fetch book data");
-                          }
-                          return res.json();
-                        })
-                        .then((data) => {
-                          setBook(data.result);
-                          setOpenBookDetails(true);
-                        });
+                          .then((res) => {
+                            if (!res.ok) {
+                              throw Error("Could not fetch book data");
+                            }
+                            return res.json();
+                          })
+                          .then((data) => {
+                            setBook(data.result);
+                            setOpenBookDetails(true);
+                          });
                       }}
                     >
                       More Details
@@ -83,7 +83,6 @@ function TestPage() {
   return (
     // This is the Book Details overlay
     <div className="test-container">
-      {openBookDetails && <BookDetails book={book} closeBookDetails={setOpenBookDetails} />}
       {/* Search tab with search button */}
       <div className="searchtab-container">
         <div className="search-input-container">
@@ -106,7 +105,12 @@ function TestPage() {
           Search
         </button>
       </div>
-
+      {/* Search tab end */}
+      {/* Book details start */}
+      {openBookDetails && (
+        <BookDetails book={book} closeBookDetails={setOpenBookDetails} />
+      )}
+      {/* Book details end */}
       {books && (
         <div id="book-search-results">
           {/* This displays all the book results in an unordered list format */}
@@ -118,4 +122,3 @@ function TestPage() {
 }
 
 export default TestPage;
-
