@@ -60,7 +60,7 @@
     display: block;
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1248px) {
     .AboutUs .container {
         width: 100%; 
     }

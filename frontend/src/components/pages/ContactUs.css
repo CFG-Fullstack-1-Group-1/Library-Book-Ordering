@@ -15,9 +15,9 @@
     color: var(--primary-dark);
 }
 
-.contactUs .container .paragraph {
+/* .contactUs .container .paragraph {
     margin: 20px;
-}
+} */
 
 .contactUs .container .content {
     display: grid;
@@ -35,15 +35,7 @@
     margin: 3%;
 }
 
-.contactUs .teampic {
-    border-radius: 60px;
-    margin-top: -6rem;
-    margin-left: 40%;
-    width: 110px;
-    height: auto;
-}
-
-.AcontactUs .card p {
+.contactUs .card p {
     color: var(--overlay);
     font-size: 1.1rem;
     margin: 12px;
@@ -55,7 +47,7 @@
     font-weight: 700;
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1248px) {
     .contactUs .container {
         width: 100%; 
     }

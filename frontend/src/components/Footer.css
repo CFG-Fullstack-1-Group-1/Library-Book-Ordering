@@ -113,7 +113,7 @@
 
 
 /* play aroubnd with this so you get all the columns equal */
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1248px) {
     .footer-links {
         padding-top: 1rem;
     }

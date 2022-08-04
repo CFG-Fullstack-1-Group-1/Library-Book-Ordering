@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "../pages/AboutUs.css";
 import Card from "./Card";
-import arrowUp from "./imgs/arrow_up.svg";
-import arrowDown from "./imgs/arrow_down.svg";
+import arrowUp from "./images/arrow_up.svg";
+import arrowDown from "./images/arrow_down.svg";
 
 export default function AboutUsProfile({
   pic,
@@ -13,7 +13,7 @@ export default function AboutUsProfile({
   const [showFull, setShowFull] = useState(false);
 
   function onClickHandler() {
-    setShowFull((showFull) => !showFull);
+    setShowFull((showFullUpdated) => !showFullUpdated);
   }
 
   return (

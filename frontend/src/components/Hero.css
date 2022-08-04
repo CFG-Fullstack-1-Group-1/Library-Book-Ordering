@@ -52,7 +52,7 @@
     font-weight: 600;
 }
 
-@media screen and (max-width:940px) {
+@media screen and (max-width:1248px) {
 
     .hero .content .hero-whitelogo {
         width: 250px;

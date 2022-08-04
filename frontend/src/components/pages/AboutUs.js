@@ -12,10 +12,8 @@ function AboutUs() {
     <div className="AboutUs">
       <div className="container">
         <h1>About Us</h1>
-
-        {/* Edit stuff here by making a card component and then importing it into the webpage*/}
-        <div className="paragraph">
-          <Card>
+        <Card>
+          <div className="paragraph">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
             varius duis at consectetur lorem donec massa. Turpis egestas
@@ -25,22 +23,22 @@ function AboutUs() {
             malesuada bibendum arcu vitae elementum curabitur. Pellentesque diam
             volutpat commodo sed egestas egestas fringilla phasellus faucibus.
             Morbi tincidunt ornare massa eget egestas purus viverra accumsan in.
-          </Card>
-        </div>
+          </div>
+        </Card>
         <div className="content">
           <div className="members-container">
             <AboutUsProfile
               pic={user1}
-              name="Name 1"
+              name="Anna Sapsford-Francis"
               shortDescription="Head of things"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
               varius duis at consectetur lorem donec massa."
             />
             <AboutUsProfile
-              pic={user1}
-              name="Name 1"
-              shortDescription="Head of things"
+              pic={user2}
+              name="Eleanor"
+              shortDescription="Head of thinking"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
               varius duis at consectetur lorem donec massa."
@@ -49,17 +47,17 @@ function AboutUs() {
 
           <div className="members-container1">
             <AboutUsProfile
-              pic={user1}
-              name="Name 1"
-              shortDescription="Head of things"
+              pic={user3}
+              name="Mariam"
+              shortDescription="Head of thanks"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
               varius duis at consectetur lorem donec massa."
             />
             <AboutUsProfile
-              pic={user1}
-              name="Name 1"
-              shortDescription="Head of things"
+              pic={user4}
+              name="Margalida Bover Torres"
+              shortDescription="Head of thoughts"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
               varius duis at consectetur lorem donec massa."
@@ -68,8 +66,8 @@ function AboutUs() {
         </div>
 
         {/* Edit stuff here */}
-        <div className="paragraph">
-          <p>
+        <Card>
+          <div className="paragraph">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
             varius duis at consectetur lorem donec massa. Turpis egestas
@@ -79,8 +77,8 @@ function AboutUs() {
             malesuada bibendum arcu vitae elementum curabitur. Pellentesque diam
             volutpat commodo sed egestas egestas fringilla phasellus faucibus.
             Morbi tincidunt ornare massa eget egestas purus viverra accumsan in.
-          </p>
-        </div>
+          </div>
+        </Card>
       </div>
     </div>
   );

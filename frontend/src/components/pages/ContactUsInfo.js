@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { MdPlace } from "react-icons/md";
+import { AiFillEnvironment } from "react-icons/ai";
 
 const ItemStyle = styled.div`
   padding: 2rem;
@@ -15,8 +15,8 @@ const ItemStyle = styled.div`
 `;
 
 export default function ContactUsInfo({
-  icon = <MdPlace />,
-  text = "this is info",
+  icon = <AiFillEnvironment />,
+  text = "123 Road, London, L1 CGF4",
 }) {
   return (
     <ItemStyle>
@@ -27,3 +27,17 @@ export default function ContactUsInfo({
     </ItemStyle>
   );
 }
+
+// export default function ContactUsInfo1({
+//   icon = <AiFillEnvironment />,
+//   text = "12345678910",
+// }) {
+//   return (
+//     <ItemStyle>
+//       <div className="icon">{icon}</div>
+//       <div className="info">
+//         <p>{text}</p>
+//       </div>
+//     </ItemStyle>
+//   );
+// }
