@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import BookDetails from "./Modal/BookDetails";
 import "./TestSearch.css";
 
 function TestPage() {
@@ -6,6 +7,8 @@ function TestPage() {
   const [book, setBook] = useState(null);
   // Holds book search
   const [books, setBooks] = useState(null);
+  // Show Book Details on click
+  const [openBookDetails, setOpenBookDetails] = useState(false);
 
   // Get book details from Django API.
   function getBook(google_books_id) {
@@ -37,46 +40,41 @@ function TestPage() {
         // This is what is shown on the search results tab
         setBooks(
           data.results.map((book) => (
-            <li key={book.google_books_id}>
-              <div className="bookresults-card">
-                <img
-                  src={book.small_thumbnail}
-                  alt={"Book cover of " + book.title}
-                />
-                <div className="bookresults-bottom">
-                  <p className="result-title">{book.title}</p>
-                  <p className="result-info">{`Author ${book.authors}`}</p>
-                  <p className="result-info">{`Year ${book.publishedDate}`}</p>
-                  <p className="result-info">{`ISBN 10 ${book.isbn_10}`}</p>
-                  {/* Connect GoogleBooks ID To this specific button and create a link to an overlay or page for it */}
+            <div >
+              <li key={book.google_books_id}>
+                <div className="bookresults-card">
+                  <img
+                    src={book.small_thumbnail}
+                    alt={"Book cover of " + book.title}
+                  />
+                  <div className="bookresults-bottom">
+                    <p className="result-title">{book.title}</p>
+                    <p className="result-info">{`Author ${book.authors}`}</p>
+                    <p className="result-info">{`Year ${book.publishedDate}`}</p>
+                    <p className="result-info">{`ISBN 10 ${book.isbn_10}`}</p>
+                    {/* Connect GoogleBooks ID To this specific button and create a link to an overlay or page for it */}
+                    <button
+                      className="bookresults-btn"
+                      onClick={() => {
+                        setOpenBookDetails(true);
+                      }}
+                    >
+                      More Details
+                    </button>
+                  </div>
                 </div>
-                <button className="bookresults-btn">More Details</button>
-                {/* Onclick --> pass in the book.google_books_id */}
-                {/* Dynamically code it or pull it up through it */}
-              </div>
-            </li>
+              </li>
+            </div>
           ))
         );
       });
   }
 
   return (
+    // This is the Book Details overlay
     <div className="test-container">
-      {book && (
-        <div id="book-details">
-          <h1>{book.title}</h1>
-          <h2>{book.authors}</h2>
-          <img src={book.thumbnail} alt={"Book cover of " + book.title}></img>
-          <p>{`ISBN 10 ${book.isbn_10}`}</p>
-          <p>{`ISBN 13 ${book.isbn_13}`}</p>
-          <p>{`Google Books ID ${book.google_books_id}`}</p>
-          <p>{`Publisher ${book.publisher}`}</p>
-          <p>{`Category ${book.category}`}</p>
-          <p>{`Description ${book.description}`}</p>
-        </div>
-      )}
-
-      {/* Search tab with searc button */}
+      {openBookDetails && <BookDetails closeBookDetails={setOpenBookDetails} />}
+      {/* Search tab with search button */}
       <div className="searchtab-container">
         <div className="search-input-container">
           <label htmlFor="title" className="searchtab-label">
@@ -89,7 +87,7 @@ function TestPage() {
             id="search_term"
           ></input>
         </div>
-
+        {/* This is the book search button*/}
         <button
           className="search-btn"
           type="submit"
@@ -98,6 +96,7 @@ function TestPage() {
           Search
         </button>
       </div>
+
       {books && (
         <div id="book-search-results">
           {/* This displays all the book results in an unordered list format */}
@@ -109,3 +108,4 @@ function TestPage() {
 }
 
 export default TestPage;
+

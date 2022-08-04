@@ -96,12 +96,12 @@ function TestPage() {
           <h1>{book.title}</h1>
           <h2>{book.authors}</h2>
           <img src={book.thumbnail} alt={"Book cover of " + book.title}></img>
-          <p>{`ISBN 10 ${book.isbn_10}`}</p>
-          <p>{`ISBN 13 ${book.isbn_13}`}</p>
-          <p>{`Google Books ID ${book.google_books_id}`}</p>
-          <p>{`Publisher ${book.publisher}`}</p>
-          <p>{`Category ${book.category}`}</p>
-          <p>{`Description ${book.description}`}</p>
+          <p>{`ISBN10: ${book.isbn_10}`}</p>
+          <p>{`ISBN13: ${book.isbn_13}`}</p>
+          <p>{`Google Books ID: ${book.google_books_id}`}</p>
+          <p>{`Publisher: ${book.publisher}`}</p>
+          <p>{`Category: ${book.category}`}</p>
+          <p>{`Description: ${book.description}`}</p>
         </div>
       )}
 

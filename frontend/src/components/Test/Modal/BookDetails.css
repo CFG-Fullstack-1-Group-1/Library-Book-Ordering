@@ -1,0 +1,59 @@
+.overlay {
+  min-height: 65vh;
+  width: 100%;
+  position: fixed;
+  background: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-inner {
+  background: white;
+  width: 700px;
+  height: 550px;
+  padding: 1.5rem;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 1.3rem;
+}
+
+.overlay .overlay-inner .close-btn {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  top: 1rem;
+  right: 1rem;
+  outline: none;
+  border: none;
+  font-size: 100%;
+  background-color: var(--primary-dark);
+  border-radius: 50px;
+  color: white;
+}
+
+.overlay .overlay-inner .close-btn:hover {
+  color: var(--primary-dark);
+  background-color: white;
+  outline: auto;
+  border: auto;
+  border-color: var(--primary-dark);
+  cursor: pointer;
+}
+
+.overlay-inner .inner-box {
+  margin-top: 30px;
+  display: flex;
+}
+.overlay-inner .inner-box img {
+  margin-right: 20px;
+  width: auto;
+  height: 250px;
+}
+
+.overlay-inner .description {
+  margin-top: 2rem;
+  text-align: justify;
+  font-size: 13px;
+}
