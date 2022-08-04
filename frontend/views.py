@@ -29,5 +29,5 @@ def logout_view(request):
     return HttpResponseRedirect(reverse("index"))
 
 
-def not_found_view(request):
-    return redirect(index)
+def mismatched_path(request):
+    return redirect('/', index)
