@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "../SearchForm/SearchForm.css";
-import "../SearchResults/SearchResultCard.css";
 import "./TestSearch.css";
 
 function TestPage() {
@@ -26,6 +24,7 @@ function TestPage() {
   // Get book search from Django API.
   function getBooks(search_term) {
     fetch(`/api/books/?q="${search_term}"`)
+      // tinker with aboive ^
       .then((res) => {
         if (!res.ok) {
           console.log(search_term);
@@ -39,20 +38,21 @@ function TestPage() {
         setBooks(
           data.results.map((book) => (
             <li key={book.google_books_id}>
-              <div className="sr-card">
+              <div className="bookresults-card">
                 <img
                   src={book.small_thumbnail}
                   alt={"Book cover of " + book.title}
                 />
-                <div className="sr-bottom">
+                <div className="bookresults-bottom">
                   <p className="result-title">{book.title}</p>
                   <p className="result-info">{`Author ${book.authors}`}</p>
                   <p className="result-info">{`Year ${book.publishedDate}`}</p>
                   <p className="result-info">{`ISBN 10 ${book.isbn_10}`}</p>
                   {/* Connect GoogleBooks ID To this specific button and create a link to an overlay or page for it */}
-                  {/* Use logic from lines 12-24 and lines 92-93 from TestPage.js*/}
                 </div>
-                <button className="sr-details-btn">More Details</button>
+                <button className="bookresults-btn">More Details</button>
+                {/* Onclick --> pass in the book.google_books_id */}
+                {/* Dynamically code it or pull it up through it */}
               </div>
             </li>
           ))
@@ -76,21 +76,22 @@ function TestPage() {
         </div>
       )}
 
-      <div className="search-content">
-        <div className=" form-inputs">
-          <label htmlFor="title" className="form-label">
-            <p>Title</p>
+      {/* Search tab with searc button */}
+      <div className="searchtab-container">
+        <div className="search-input-container">
+          <label htmlFor="title" className="searchtab-label">
+            <p>Search for your book</p>
           </label>
           <input
             type="text"
-            className="form-input"
+            className="search-input"
             placeholder="Title"
             id="search_term"
           ></input>
         </div>
 
         <button
-          className="form-input-btn"
+          className="search-btn"
           type="submit"
           onClick={() => getBooks(document.querySelector("#search_term").value)}
         >
@@ -98,7 +99,8 @@ function TestPage() {
         </button>
       </div>
       {books && (
-        <div id="book-search">
+        <div id="book-search-results">
+          {/* This displays all the book results in an unordered list format */}
           <ul>{books}</ul>
         </div>
       )}
