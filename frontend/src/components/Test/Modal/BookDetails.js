@@ -4,7 +4,7 @@ import "./BookDetails.css";
 
 // Used https://www.youtube.com/watch?v=ZCvemsUfwPQ to design closing and opening of pop-up
 
-function BookDetails(book, { closeBookDetails }) {
+function BookDetails({ book, closeBookDetails }) {
   return (
     <>
       <div className="overlay">

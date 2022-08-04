@@ -56,7 +56,17 @@ function TestPage() {
                     <button
                       className="bookresults-btn"
                       onClick={() => {
-                        setOpenBookDetails(true);
+                        fetch(`/api/book/${book.google_books_id}/`)
+                        .then((res) => {
+                          if (!res.ok) {
+                            throw Error("Could not fetch book data");
+                          }
+                          return res.json();
+                        })
+                        .then((data) => {
+                          setBook(data.result);
+                          setOpenBookDetails(true);
+                        });
                       }}
                     >
                       More Details
@@ -73,7 +83,7 @@ function TestPage() {
   return (
     // This is the Book Details overlay
     <div className="test-container">
-      {openBookDetails && <BookDetails closeBookDetails={setOpenBookDetails} />}
+      {openBookDetails && <BookDetails book={book} closeBookDetails={setOpenBookDetails} />}
       {/* Search tab with search button */}
       <div className="searchtab-container">
         <div className="search-input-container">
