@@ -20,7 +20,7 @@
   align-items: center;
 }
 
-.sr-details-btn {
+.sr-card .sr-bottom .sr-details-btn {
   border-radius: 50px;
   width: 200px;
   height: 50px;
@@ -32,7 +32,7 @@
   font-weight: 500;
 }
 
-.sr-details-btn:hover {
+.sr-card .sr-bottom .sr-details-btn:hover {
   cursor: pointer;
   background: rgb(5, 28, 39);
   font-weight: 600;
