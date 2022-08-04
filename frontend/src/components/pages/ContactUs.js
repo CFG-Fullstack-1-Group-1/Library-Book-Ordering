@@ -20,34 +20,84 @@ function ContactUsInfo() {
 
 function ContactUsForm() {
   const emailInputRef = createRef();
-  const [isValid, setIsValid] = useState(true);
+  const textInputRef = createRef();
+  const submitRef = createRef();
+  const [isEmailValid, setIsEmailValid] = useState(true);
+  const [isTextValid, setIsTextValid] = useState(true);
 
   function validateEmail(email) {
     return email.match(/^([a-z0-9_-]+\@[a-z0-9_-]+\.[a-z]+)$/);
   }
 
-  function onBlurHandler() {
+  function validateText(text) {
+    return text.length > 0;
+  }
+
+  function onBlurInputEmailHandler() {
     const email = String(emailInputRef.current.value).toLowerCase();
     emailInputRef.current.value = email;
-    setIsValid(validateEmail(email));
+    setIsEmailValid(validateEmail(email));
+  }
+
+  function onChangeInputEmailHandler() {
+    if (!isEmailValid) {
+      onBlurInputEmailHandler();
+    }
+  }
+
+  function onBlurInputTextHandler() {
+    const text = String(textInputRef.current.value);
+    textInputRef.current.value = text;
+    setIsTextValid(validateText(text));
+  }
+
+  function onChangeInputTextHandler() {
+    if (!isTextValid) {
+      onBlurInputTextHandler();
+    }
+  }
+
+  function onSubmit(event) {
+    event.preventDefault();
+    const email = String(emailInputRef.current.value).toLowerCase();
+    const text = String(textInputRef.current.value);
+    onBlurInputEmailHandler();
+    onBlurInputTextHandler();
+    if (validateEmail(email) && validateText(text)) {
+      console.log(`Send contact to ${email} with text: ${text}`);
+      emailInputRef.current.value = "";
+      textInputRef.current.value = "";
+    }
   }
 
   return (
     <Card>
       <div className="contactUs-form">
-        <form>
+        <form onSubmit={onSubmit}>
           <div>
-            <label for="email">email:</label>
+            <label htmlFor="email">email:</label>
             <input
-              style={!isValid ? { color: "red" } : {}}
+              style={!isEmailValid ? { color: "red" } : {}}
               type="email"
               name="email"
-              onBlur={onBlurHandler}
+              onBlur={onBlurInputEmailHandler}
+              onChange={onChangeInputEmailHandler}
               ref={emailInputRef}
             />
           </div>
-          <input type="text" />
-          <input type="submit" value="Submit" />
+          <input
+            type="text"
+            ref={textInputRef}
+            onBlur={onBlurInputTextHandler}
+            onChange={onChangeInputTextHandler}
+          />
+          {!isTextValid && <p>Please enter message</p>}
+          <input
+            type="submit"
+            value="Submit"
+            ref={submitRef}
+            disabled={!isEmailValid || !isTextValid}
+          />
         </form>
       </div>
     </Card>
