@@ -1,5 +1,4 @@
 import React from "react";
-import Cat from "../../../../static/images/CatInTheHat.jpg";
 import "./BookDetails.css";
 
 // Used https://www.youtube.com/watch?v=ZCvemsUfwPQ to design closing and opening of pop-up
@@ -12,7 +11,7 @@ function BookDetails({ book, closeBookDetails }) {
           <button className="close-btn" onClick={() => closeBookDetails(false)}>
             Close
           </button>
-          <h1>Title</h1>
+          <h1>{book.title}</h1>
           <div className="inner-box">
             <img src={book.thumbnail} alt={"Book cover of " + book.title} />
             <div className="book-details">

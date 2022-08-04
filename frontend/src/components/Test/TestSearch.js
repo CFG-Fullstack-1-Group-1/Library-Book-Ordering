@@ -96,6 +96,7 @@ function TestPage() {
             id="search_term"
           ></input>
         </div>
+
         {/* This is the book search button*/}
         <button
           className="search-btn"
@@ -106,14 +107,17 @@ function TestPage() {
         </button>
       </div>
       {/* Search tab end */}
+
       {/* Book details start */}
       {openBookDetails && (
         <BookDetails book={book} closeBookDetails={setOpenBookDetails} />
       )}
       {/* Book details end */}
+
+      {/* This displays all the book results in an unordered list format */}
+      {/* It will also hide the search results list when we click on a specific book */}
       {books && !openBookDetails && (
         <div id="book-search-results">
-          {/* This displays all the book results in an unordered list format */}
           <ul>{books}</ul>
         </div>
       )}

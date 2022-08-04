@@ -1,7 +1,7 @@
 .overlay {
   min-height: 65vh;
   width: 100%;
-  position: fixed;
+  position: relative;
   background: var(--primary-dark);
   display: flex;
   align-items: center;
