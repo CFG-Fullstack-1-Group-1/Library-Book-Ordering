@@ -107,7 +107,7 @@ function TestPage() {
         </button>
       </div>
 
-      {books && (
+      {books && !openBookDetails && (
         <div id="book-search-results">
           {/* This displays all the book results in an unordered list format */}
           <ul>{books}</ul>
