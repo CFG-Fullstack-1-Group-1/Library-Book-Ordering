@@ -51,8 +51,8 @@ function TestPage() {
                   <p className="result-info">{`ISBN 10 ${book.isbn_10}`}</p>
                   {/* Connect GoogleBooks ID To this specific button and create a link to an overlay or page for it */}
                   {/* Use logic from lines 12-24 and lines 92-93 from TestPage.js*/}
-                  <button className="form-input-btn">More Details</button>
                 </div>
+                <button className="sr-details-btn">More Details</button>
               </div>
             </li>
           ))
@@ -76,7 +76,7 @@ function TestPage() {
         </div>
       )}
 
-      <div className="form-content">
+      <div className="search-content">
         <div className=" form-inputs">
           <label htmlFor="title" className="form-label">
             <p>Title</p>
