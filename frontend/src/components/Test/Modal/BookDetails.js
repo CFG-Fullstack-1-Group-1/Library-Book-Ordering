@@ -11,7 +11,7 @@ function BookDetails({ book, closeBookDetails }) {
           <button className="close-btn" onClick={() => closeBookDetails(false)}>
             Close
           </button>
-          <h1>{book.title}</h1>
+          <h1 className="book-title">{book.title}</h1>
           <div className="inner-box">
             <img src={book.thumbnail} alt={"Book cover of " + book.title} />
             <div className="book-details">
@@ -24,7 +24,7 @@ function BookDetails({ book, closeBookDetails }) {
             </div>
           </div>
           <p>Description</p>
-          <p>{`${book.description}`}</p>
+          <p className="book-description">{`${book.description}`}</p>
           <button onClick={() => closeBookDetails(false)}>Cancel</button>
           <button>Book details</button>
         </div>
