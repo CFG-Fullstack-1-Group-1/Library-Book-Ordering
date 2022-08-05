@@ -1,0 +1,98 @@
+.header {
+    position: fixed;
+    height: 90px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: .3s ease-in;
+    overflow: hidden;
+/*  REVISIT THIS LATER AS NEEDED */
+    background-color: rgba(3, 72, 164, .9);
+}
+
+.header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    margin: auto;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.header .nav-menu a {
+    color: #FFFFFF;
+}
+
+.header .navbar .bluelogo {
+    width: 250px;
+    height: auto;
+}
+
+.header .navbar .navbar-whitelogo {
+    width: 250px;
+    height: auto;
+}
+
+.header .nav-menu {
+    display: flex;
+    
+}
+
+.header .nav-item {
+    padding: 1rem;
+    font-weight: 500;
+}
+
+.header .nav-item a:hover {
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.hamburger {
+    display: none;
+}
+
+
+
+@media screen and (max-width:940px) {
+    .header {
+        max-width: 100%;
+        background-color: rgba(3, 72, 164, .9);
+    }
+
+    .header .navbar {
+        max-width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 90px;
+        flex-direction: column;
+        background-color: rgba(3, 72, 164, .9);
+        width: 100%;
+        height: 90vh;
+        z-index: 999;
+        text-align: center;
+        transition: .3s;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1.5rem 0;
+    }
+
+   .header .navbar .whitelogo {
+    /* Shall I keep this at a static number or shall the logo size change as the app is shifted from bigger to smaller? */
+        width: 40%;
+    }
+}
