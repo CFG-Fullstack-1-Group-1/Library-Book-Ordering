@@ -1,0 +1,148 @@
+/*<---------------------- SEARCH BAR STYLING START ----------------------> */
+/* This has all the stylings for the search tab on lines 80-100*/
+.searchtab-container {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 255, 255) 1%,
+    rgba(176, 226, 230, 1) 40%,
+    rgb(176, 232, 240) 70%,
+    rgb(255, 255, 255) 100%
+  );
+  border-radius: 10px 10px 10px 10px;
+  padding: 1%;
+  margin-bottom: 3%;
+}
+
+.searchtab-container .search-input-container {
+  margin-bottom: 0.1rem;
+  width: 80%;
+  margin-bottom: 3%;
+}
+
+.searchtab-container .search-input-container .searchtab-label {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 450;
+  color: rgb(0, 0, 0);
+}
+
+.search-input {
+  display: block;
+  padding-left: 10%;
+  outline: none;
+  border-radius: 2px;
+  height: 40px;
+  width: 100%;
+  border: none;
+  border-radius: 50px;
+  background-color: rgb(196, 190, 190);
+}
+
+.search-input::placeholder {
+  color: #6d6969;
+  font-size: 12px;
+  padding-left: 7%;
+}
+
+.search-btn {
+  border-radius: 50px;
+  width: 20%;
+  height: 50px;
+  margin-top: 10px;
+  background: #66bfcb;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 100%;
+  font-weight: 500;
+  align-self: flex-end;
+}
+
+.search-btn:hover {
+  cursor: pointer;
+  background: rgb(5, 28, 39);
+  font-weight: 600;
+  transition: all 0.1s ease-out;
+}
+
+/*<---------------------- SEARCH TAB STYLINGS END  ----------------------> */
+
+/*<---------------------- BOOK RESULTS STYLING START ----------------------> */
+/* This has all the stylings of the indvidual card for each book result in lines 41-56*/
+.bookresults-card {
+  display: flex;
+  background-color: #bfbbbb;
+  border-radius: 40px;
+  padding: 0.5rem;
+  margin-bottom: 1%;
+  box-shadow: 0 5px 5px rgba(212, 185, 150, 0.5);
+  transition: 0.5s;
+  text-align: justify;
+  position: relative;
+  width: 50%;
+}
+
+.bookresults-card:hover {
+  transform: scale(1.1);
+  background-color: rgba(230, 230, 230, 0.8);
+}
+.bookresults-card img {
+  width: auto;
+  height: 250px;
+  padding: 1% 2% 1% 10%;
+}
+.bookresults-card .bookresults-bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 1% 0% 0% 0;
+}
+
+.bookresults-card .bookresults-bottom .result-title {
+  font-size: 30px;
+}
+
+.bookresults-card .bookresults-bottom .result-info {
+  font-size: 20px;
+}
+
+.bookresults-card .bookresults-btn {
+  border-radius: 50px;
+  width: 200px;
+  height: 50px;
+  background: #66bfcb;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 100%;
+  font-weight: 500;
+}
+
+.bookresults-card .bookresults-btn:hover {
+  cursor: pointer;
+  background: rgb(5, 28, 39);
+  font-weight: 600;
+  transition: all 0.1s ease-out;
+}
+
+.book-search-results {
+  align-items: center;
+}
+
+/*<---------------------- BOOK RESULTS STYLING END ----------------------> */
+
+/*<---------------------- SELECTED BOOK DETAILS STYLING START  ----------------------> */
+.test-container {
+  padding: 50px;
+  margin: 50px;
+}
+
+/*<---------------------- SELECTED BOOK DETAILS STYLING END  ----------------------> */
+
+/* RESPONSIVE WEB CHANGES START */
+@media screen and (max-width: 800px) {
+  .bookresults-card {
+    width: 80%;
+    padding: 1%;
+    margin: 5%;
+  }
+}

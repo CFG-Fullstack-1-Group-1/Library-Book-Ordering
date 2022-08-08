@@ -1,0 +1,76 @@
+.AboutUs {
+    width: 100%;
+}
+
+.AboutUs .container {
+    width: 1240px;
+    margin: 4rem auto;
+    padding: 4rem 0rem;
+}
+
+.AboutUs h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--primary-dark);
+}
+
+.AboutUs .container .paragraph {
+    margin: 20px;
+}
+
+.AboutUs .container .content {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    margin: 4rem 0;
+}
+
+.AboutUs .card {
+    border: 1px solid #eee; 
+    background-color: rgb(215, 231, 248);
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgb(51, 51, 51, .2);
+    padding: 2rem;
+    margin: 3%;
+}
+
+.AboutUs .teampic {
+    border-radius: 60px;
+    margin-top: -4rem;
+    margin-left: 40%;
+    width: 110px;
+    height: auto;
+}
+
+.AboutUs .card p {
+    color: var(--overlay);
+    font-size: 1.1rem;
+    margin: 12px;
+}
+
+.AboutUs .card span {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.AboutUs-arrow {
+    width: 1.5rem;
+    margin: auto;
+    display: block;
+}
+
+@media screen and (max-width: 1220px) {
+    .AboutUs .container {
+        width: 100%; 
+    }
+
+    .AboutUs .container .content {
+        grid-template-columns: 1fr;
+    }
+
+    .AboutUs .card {
+        max-width: 100%;
+        margin: 1rem;
+    }
+}

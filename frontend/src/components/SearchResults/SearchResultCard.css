@@ -1,0 +1,42 @@
+.sr-card {
+  display: flex;
+  background-color: #bfbbbb;
+  border-radius: 40px;
+  padding: 0.5rem;
+  margin-bottom: 1%;
+  box-shadow: 0 5px 5px rgba(212, 185, 150, 0.5);
+  transition: 0.5s;
+  text-align: justify;
+  position: relative;
+  width: 50%;
+}
+.sr-card:hover {
+  transform: scale(1.1);
+  background-color: rgba(230, 230, 230, 0.8);
+}
+.sr-card img {
+  width: auto;
+  height: 250px;
+  padding: 1% 2% 1% 10%;
+}
+.sr-card .sr-bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 1% 0% 0% 0;
+}
+
+.sr-card .sr-bottom .result-title {
+  font-size: 30px;
+}
+
+.sr-card .sr-bottom .result-info {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .sr-card {
+    width: 90%;
+    padding: 1%;
+    margin: 5%;
+  }
+}
