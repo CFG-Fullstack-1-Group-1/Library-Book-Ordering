@@ -1,9 +1,16 @@
 import React from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import "./BookDetails.css";
+import Order from "../../pages/Order";
 
 // Used https://www.youtube.com/watch?v=ZCvemsUfwPQ to design closing and opening of pop-up
 
 function BookDetails({ book, closeBookDetails }) {
+  const navigate = useNavigate();
+  const navigateToOrder = () => {
+    navigate("/order");
+  };
+
   return (
     <>
       <div className="overlay">
@@ -25,8 +32,19 @@ function BookDetails({ book, closeBookDetails }) {
           </div>
           <p>Description</p>
           <p className="book-description">{`${book.description}`}</p>
-          <button className='bookdetails-cancel-btn' onClick={() => closeBookDetails(false)}>Cancel</button>
-          <button className='bookdetails-btn'>Book details</button>
+          <button
+            className="bookdetails-cancel-btn"
+            onClick={() => closeBookDetails(false)}
+          >
+            Cancel
+          </button>
+          <button className="bookdetails-btn" onClick={navigateToOrder}>
+            Order
+          </button>
+
+          <Routes>
+            <Route path="/order" element={<Order />} />
+          </Routes>
         </div>
       </div>
     </>
