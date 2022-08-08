@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../pages/AboutUs.css";
+import "./AboutUs.css";
 import Card from "./Card";
 import arrowUp from "./images/arrow_up.svg";
 import arrowDown from "./images/arrow_down.svg";

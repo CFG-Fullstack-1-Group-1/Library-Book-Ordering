@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import user1 from "../AboutUs/images/user1.jpg";
 import user2 from "../../../static/images/user2.jpeg";
 import user3 from "../AboutUs/images/user3.png";
-import user4 from "../AboutUs/images/user4.png";;
-import "./AboutUs.css";
+import user4 from "../AboutUs/images/user4.png";
+import "../AboutUs/AboutUs.css";
 import Card from "../AboutUs/Card";
 import AboutUsProfile from "../AboutUs/AboutUsProfile";
 

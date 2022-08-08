@@ -1,6 +1,6 @@
 import React, { createRef, useState } from "react";
-import "./ContactUs.css";
-import ContactUsTitle from "./ContactUsTitle";
+import "../ContactUs/ContactUs.css";
+import ContactUsTitle from "../ContactUs/ContactUsTitle";
 import Card from "../ContactUs/Card";
 import { AiFillEnvironment } from "react-icons/ai";
 import { FiPhone, FiMail } from "react-icons/fi";
@@ -106,11 +106,13 @@ function ContactUsForm() {
               />
               {!isTextValid && <p>Please enter message</p>}
             </div>
-            <input
-              type="submit"
-              value="Submit"
-              disabled={!isEmailValid || !isTextValid}
-            />
+            <div>
+              <input className="contactUs-btn"
+                type="submit"
+                value="Submit"
+                disabled={!isEmailValid || !isTextValid}
+              />
+            </div>
           </form>
         </div>
       </span>
