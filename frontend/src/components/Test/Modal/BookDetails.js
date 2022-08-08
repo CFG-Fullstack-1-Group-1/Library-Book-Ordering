@@ -43,7 +43,7 @@ function BookDetails({ book, closeBookDetails }) {
           </button>
 
           <Routes>
-            <Route path="/order" element={<Order />} />
+            <Route path="/order" element={<Order book={ book } />} />
           </Routes>
         </div>
       </div>
