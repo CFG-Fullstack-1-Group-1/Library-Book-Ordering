@@ -37,7 +37,7 @@ class Book(models.Model):
     category = models.CharField(max_length=100)
     isbn_10 = models.CharField(max_length=10)  # Should never be longer than 10
     isbn_13 = models.CharField(max_length=13)  # or 13 digits
-    google_books_id = models.CharField(max_length=50)
+    google_books_id = models.CharField(max_length=50, blank=True)
 
     def __str__(self):
         return f"{self.title}: {self.authors}"
