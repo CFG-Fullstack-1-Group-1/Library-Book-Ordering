@@ -25,7 +25,7 @@ function BookDetails({ book, closeBookDetails }) {
               <h2>{book.authors}</h2>
               <p>{`ISBN10: ${book.isbn_10}`}</p>
               <p>{`ISBN13: ${book.isbn_13}`}</p>
-              <p>{`Google Books ID: ${book.google_books_id}`}</p>
+              <p>{`Year: ${book.year}`}</p>
               <p>{`Publisher: ${book.publisher}`}</p>
               <p>{`Category: ${book.category}`}</p>
             </div>

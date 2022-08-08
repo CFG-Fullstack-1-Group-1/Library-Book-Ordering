@@ -12,15 +12,6 @@ const useForm = validateInfo => {
 
     const [errors, setErrors] = useState({});
 
-// e is short for event 
-// This will update the values of the form inputs
-    const handleChange = e => {
-        const { name, value } = e.target;
-        setValues({
-            ...values,
-            [name]: value
-        });
-    };
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -29,7 +20,7 @@ const useForm = validateInfo => {
         setErrors(validateInfo(values));
     };
 
-    return { handleChange, values, handleSubmit, errors };
+    return { values, handleSubmit, errors };
 }; 
 // https://youtu.be/KGFG-yQD7Dw
 
