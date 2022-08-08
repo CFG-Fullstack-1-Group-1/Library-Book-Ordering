@@ -10,6 +10,8 @@ function TestPage() {
   // Show Book Details on click
   const [openBookDetails, setOpenBookDetails] = useState(false);
 
+  // Sending Orders to Order.js
+
   // Get book details from Django API.
   function getBook(google_books_id) {
     fetch(`/api/book/${google_books_id}/`)

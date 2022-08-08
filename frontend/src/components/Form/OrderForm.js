@@ -177,7 +177,7 @@ function OrderForm() {
         <button 
         className="form-input-btn"
         type='submit'>
-          Search 
+          Order 
         </button>
 
         <button 
