@@ -1,6 +1,6 @@
 import React from "react";
 import OrderForm from "../Form/OrderForm";
-import {useLocation} from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 function Order({ book }) {
   const bookData = useLocation().state.book;
