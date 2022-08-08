@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useOrderForm from './useOrderForm';
 import validateOrderInfo from './validateOrderInfo';
 import './OrderForm.css';
@@ -8,7 +8,7 @@ import './OrderForm.css';
 function OrderForm({ book }) {
 
   const {handleChange, values, handleSubmit, errors} = useOrderForm(validateOrderInfo);
-
+  const [title, setTitle] = useState(book.title);
   console.log(book)
   return (
     <div className="form-container">
@@ -30,7 +30,7 @@ function OrderForm({ book }) {
             name='title'
             className="form-input" 
             placeholder='Title of Book'
-            value={values.title}
+            value={title}
             onChange={handleChange}
             />
             {errors.title && <p className='error-message'>{errors.title}</p>}
