@@ -6,15 +6,53 @@ import "./OrderForm.css";
 }
 
 function OrderForm({ book }) {
+  // This assigns each prop from bookdata into each field
   const [title, setTitle] = useState(book.title);
-  const [author, setAuthor] = useState(book.authors);
+  const [authors, setAuthor] = useState(book.authors);
   const [year, setYear] = useState(book.year);
   const [publisher, setPublisher] = useState(book.publisher);
   const [category, setCategory] = useState(book.category);
   const [isbn10, setIsbn10] = useState(book.isbn_10);
   const [isbn13, setIsbn13] = useState(book.isbn_13);
-
+  // Ensuring the data has actually been fed through
   console.log(book);
+
+  // Setting up order values
+  const [orders, setOrders] = useState(null);
+  //Creating an order to send to Django API and DB
+  function createOrder() {
+    const csrftoken = document.querySelector(
+      "[name=csrfmiddlewaretoken]"
+    ).value;
+    const bookTitle = document.querySelector("#book-title").value;
+    const bookAuthors = document.querySelector("#book-authors").value;
+    const bookYear = document.querySelector("#book-year").value;
+    const bookPublisher = document.querySelector("#book-publisher").value;
+    const bookCategory = document.querySelector("#book-category").value;
+    const bookISBN10 = document.querySelector("#book-isbn_10").value;
+    const bookISBN13 = document.querySelector("#book-isbn_13").value;
+    const borrowerID = document.querySelector("#borrower-id").value;
+    const borrowerName = document.querySelector("#borrower-name").value;
+
+    fetch("http://localhost:8000/api/orders/", {
+      method: "POST",
+      headers: { "X-CSRFToken": csrftoken, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        title: bookTitle,
+        authors: bookAuthors,
+        year: bookYear,
+        publisher: bookPublisher,
+        category: bookCategory,
+        ISBN10: bookISBN10,
+        ISBN13: bookISBN13,
+        borrowerid: borrowerID,
+        borrowername: borrowerName,
+      }),
+    }).then(() => {
+      console.log("new order added");
+    });
+  }
+
   return (
     <div className="form-container">
       <div className="form-content">
@@ -47,7 +85,7 @@ function OrderForm({ book }) {
               name="author"
               className="form-input"
               placeholder="Author of Book"
-              value={author}
+              value={authors}
               onChange={(e) => setAuthor(e.target.value)}
             />
           </div>
@@ -165,7 +203,9 @@ function OrderForm({ book }) {
             />
           </div>
 
-          <button className="form-input-btn">Order</button>
+          <button className="form-input-btn" onClick={() => createOrder()}>
+            Order
+          </button>
 
           <button className="form-input-btn">Cancel</button>
         </form>
