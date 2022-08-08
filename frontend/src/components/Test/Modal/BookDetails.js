@@ -8,7 +8,7 @@ import Order from "../../pages/Order";
 function BookDetails({ book, closeBookDetails }) {
   const navigate = useNavigate();
   const navigateToOrder = () => {
-    navigate("/order");
+    navigate("/order", {state:{book:book}});
   };
 
   return (
