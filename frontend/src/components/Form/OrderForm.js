@@ -14,8 +14,6 @@ function OrderForm({ book }) {
   const [category, setCategory] = useState(book.category);
   const [isbn10, setIsbn10] = useState(book.isbn_10);
   const [isbn13, setIsbn13] = useState(book.isbn_13);
-  // Ensuring the data has actually been fed through
-  console.log(book);
 
   // Setting up order values
   const [orders, setOrders] = useState(null);
@@ -54,9 +52,10 @@ function OrderForm({ book }) {
             "isbn_13": bookISBN13,
             "google_books_id": bookGoogleBooksId
         }
-    }),
-    }).then(() => {
-      console.log("new order added");
+    })})
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
     });
   }
 
