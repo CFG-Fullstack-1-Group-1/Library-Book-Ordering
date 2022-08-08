@@ -1,8 +1,11 @@
 import React from "react";
 import OrderForm from "../Form/OrderForm";
 
-function Order() {
+function Order({ book }) {
   const [orders, setOrders] = useState(null);
+  if (!book) {
+    book = null;
+  }
 
   function createOrder() {
     const csrftoken = document.querySelector(
@@ -28,7 +31,7 @@ function Order() {
 
           <div className="paragraph">
             <h3>Please input the order details for the requested book</h3>
-            <OrderForm />
+            <OrderForm book={book} />
           </div>
         </div>
       </div>

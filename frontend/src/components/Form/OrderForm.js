@@ -5,10 +5,13 @@ import './OrderForm.css';
 {/* Validation React Hook Tutorial Using by Brian Design from https://youtu.be/KGFG-yQD7Dw?t=767 */}
 
 
-function OrderForm() {
+function OrderForm({ book }) {
 
   const {handleChange, values, handleSubmit, errors} = useOrderForm(validateOrderInfo);
-
+  if (!book) {
+    book = null;
+  }
+  console.log(book)
   return (
     <div className="form-container">
     <div className="form-content">
