@@ -1,11 +1,11 @@
 import React from "react";
 import OrderForm from "../Form/OrderForm";
-import {useLocation} from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 function Order({ book }) {
   const location = useLocation();
   console.log(location);
-  console.log('test');
+  console.log("test");
   console.log(book);
   return (
     <section>
