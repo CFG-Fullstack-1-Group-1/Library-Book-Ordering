@@ -20,34 +20,41 @@ function OrderForm({ book }) {
   // Setting up order values
   const [orders, setOrders] = useState(null);
   //Creating an order to send to Django API and DB
-  function createOrder() {
+  function createOrder(event) {
+    event.preventDefault();
     const csrftoken = document.querySelector(
       "[name=csrfmiddlewaretoken]"
     ).value;
-    const bookTitle = document.querySelector("#book-title").value;
-    const bookAuthors = document.querySelector("#book-authors").value;
-    const bookYear = document.querySelector("#book-year").value;
-    const bookPublisher = document.querySelector("#book-publisher").value;
-    const bookCategory = document.querySelector("#book-category").value;
-    const bookISBN10 = document.querySelector("#book-isbn_10").value;
-    const bookISBN13 = document.querySelector("#book-isbn_13").value;
+    const bookTitle = document.querySelector("#title").value;
+    const bookAuthors = document.querySelector("#author").value;
+    const bookYear = document.querySelector("#year").value;
+    const bookPublisher = document.querySelector("#publisher").value;
+    const bookCategory = document.querySelector("#category").value;
+    const bookISBN10 = document.querySelector("#isbn-10").value;
+    const bookISBN13 = document.querySelector("#isbn-13").value;
     const borrowerID = document.querySelector("#borrower-id").value;
     const borrowerName = document.querySelector("#borrower-name").value;
+    const bookGoogleBooksId = book.google_books_id;
 
     fetch("http://localhost:8000/api/orders/", {
       method: "POST",
       headers: { "X-CSRFToken": csrftoken, "Content-Type": "application/json" },
       body: JSON.stringify({
-        title: bookTitle,
-        authors: bookAuthors,
-        year: bookYear,
-        publisher: bookPublisher,
-        category: bookCategory,
-        ISBN10: bookISBN10,
-        ISBN13: bookISBN13,
-        borrowerid: borrowerID,
-        borrowername: borrowerName,
-      }),
+        "borrower": {
+            "id": borrowerID,
+            "name": borrowerName
+        },
+        "book": {
+            "title": bookTitle,
+            "authors": bookAuthors,
+            "year": bookYear,
+            "publisher": bookPublisher,
+            "category": bookCategory,
+            "isbn_10": bookISBN10,
+            "isbn_13": bookISBN13,
+            "google_books_id": bookGoogleBooksId
+        }
+    }),
     }).then(() => {
       console.log("new order added");
     });
@@ -56,7 +63,7 @@ function OrderForm({ book }) {
   return (
     <div className="form-container">
       <div className="form-content">
-        <form action="" className="form">
+        <form onSubmit={createOrder} className="form">
           {/* Indvidual codeblock for  each form box input*/}
           {/* Input for Book title */}
           <div className=" form-inputs">
@@ -114,7 +121,7 @@ function OrderForm({ book }) {
               <p>Publisher</p>
             </label>
             <input
-              id="Publisher"
+              id="publisher"
               type="text"
               name="Publisher"
               className="form-input"
@@ -130,7 +137,7 @@ function OrderForm({ book }) {
               <p>Category</p>
             </label>
             <input
-              id="Category"
+              id="category"
               type="text"
               name="Category"
               className="form-input"
@@ -146,7 +153,7 @@ function OrderForm({ book }) {
               <p>ISBN10</p>
             </label>
             <input
-              id="ISBN10"
+              id="isbn-10"
               type="number"
               name="ISBN10"
               maxLength="10"
@@ -164,7 +171,7 @@ function OrderForm({ book }) {
               <p>ISBN13</p>
             </label>
             <input
-              id="ISBN13"
+              id="isbn-13"
               type="number"
               name="ISBN13"
               maxLength="13"
@@ -183,6 +190,7 @@ function OrderForm({ book }) {
               <p>Borrower ID</p>
             </label>
             <input
+              id="borrower-id"
               type="number"
               name="Borrower ID"
               className="form-input"
@@ -196,6 +204,7 @@ function OrderForm({ book }) {
               <p>Borrower Name</p>
             </label>
             <input
+              id="borrower-name"
               type="text"
               name="Borrower Name"
               className="form-input"
@@ -203,9 +212,7 @@ function OrderForm({ book }) {
             />
           </div>
 
-          <button className="form-input-btn" onClick={() => createOrder()}>
-            Order
-          </button>
+          <input type="submit" className="form-input-btn" value="Order"/>
 
           <button className="form-input-btn">Cancel</button>
         </form>
