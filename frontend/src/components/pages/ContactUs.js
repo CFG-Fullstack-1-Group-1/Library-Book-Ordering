@@ -10,7 +10,7 @@ import { FiPhone, FiMail } from "react-icons/fi";
 
 function ContactUsInfo() {
   return (
-    <Card>
+    <Card className="contact-info">
       <span>
         <FiPhone />
         <p> 12345678910</p>
@@ -82,14 +82,13 @@ function ContactUsForm() {
 
   return (
     <Card className="contact-us-form-card">
-      <span>
         <div>
           <form onSubmit={onSubmit}>
             <div>
               <label htmlFor="email">Your email: </label>
               <input
                 style={!isEmailValid ? { color: "red" } : {}}
-                type="email"
+                type="text"
                 name="email"
                 onBlur={onBlurInputEmailHandler}
                 onChange={onChangeInputEmailHandler}
@@ -100,13 +99,14 @@ function ContactUsForm() {
               <label htmlFor="text"> Message/enquiry: </label>
               <input
                 type="text"
+                className="contactUs-text"
                 ref={textInputRef}
                 onBlur={onBlurInputTextHandler}
                 onChange={onChangeInputTextHandler}
               />
               {!isTextValid && <p>Please enter message</p>}
             </div>
-            <div>
+            <div className="submit-btn-container">
               <input className="contactUs-btn"
                 type="submit"
                 value="Submit"
@@ -115,7 +115,6 @@ function ContactUsForm() {
             </div>
           </form>
         </div>
-      </span>
     </Card>
   );
 }
