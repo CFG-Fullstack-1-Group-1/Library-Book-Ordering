@@ -4,9 +4,21 @@
 }
 
 .contactUs .container {
-    width: 1240px;
+    width: 1248px;
     margin: 4rem auto;
     padding: 4rem 0rem;
+}
+
+.contactUs .contact-form-container {
+    display: flex;
+    justify-content: left;
+}
+
+.contactUs .contact-us-form-card {
+    width: 60%;
+    font-style: normal;
+    font-size: medium;
+    color: black;
 }
 
 .contactUs h1 {
@@ -15,9 +27,9 @@
     color: var(--primary-dark);
 }
 
-/* .contactUs .container .paragraph {
+.contactUs .container .paragraph {
     margin: 20px;
-} */
+}
 
 .contactUs .container .content {
     display: grid;
@@ -42,10 +54,14 @@
 }
 
 .contactUs .card span {
-    color: var(--primary-color);
-    font-size: 1rem;
+    color: var(black);
+    font-size: 1.5rem;
     font-weight: 700;
+    align-items: center;
+    display: flex;
 }
+
+
 
 @media screen and (max-width: 1248px) {
     .contactUs .container {

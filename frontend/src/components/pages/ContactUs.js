@@ -3,6 +3,7 @@ import "./ContactUs.css";
 import ContactUsTitle from "./ContactUsTitle";
 import Card from "../ContactUs/Card";
 import { AiFillEnvironment } from "react-icons/ai";
+import { FiPhone, FiMail } from "react-icons/fi";
 
 // https://www.youtube.com/watch?v=BtdM2_likL8
 // More complex version https://www.youtube.com/watch?v=KGFG-yQD7Dw
@@ -10,10 +11,20 @@ import { AiFillEnvironment } from "react-icons/ai";
 function ContactUsInfo() {
   return (
     <Card>
-      <div className="">
+      <span>
+        <FiPhone />
+        <p> 12345678910</p>
+      </span>
+      <span>
+        <FiMail />
+        <p> hello@requisit.com</p>
+      </span>
+      <span className="">
         <AiFillEnvironment />
         <p>123 Road, London, L1 CGF4</p>
-      </div>
+      </span>
+
+      <span></span>
     </Card>
   );
 }
@@ -21,7 +32,6 @@ function ContactUsInfo() {
 function ContactUsForm() {
   const emailInputRef = createRef();
   const textInputRef = createRef();
-  const submitRef = createRef();
   const [isEmailValid, setIsEmailValid] = useState(true);
   const [isTextValid, setIsTextValid] = useState(true);
 
@@ -71,35 +81,39 @@ function ContactUsForm() {
   }
 
   return (
-    <Card>
-      <div className="contactUs-form">
-        <form onSubmit={onSubmit}>
-          <div>
-            <label htmlFor="email">email:</label>
+    <Card className="contact-us-form-card">
+      <span>
+        <div>
+          <form onSubmit={onSubmit}>
+            <div>
+              <label htmlFor="email">Your email: </label>
+              <input
+                style={!isEmailValid ? { color: "red" } : {}}
+                type="email"
+                name="email"
+                onBlur={onBlurInputEmailHandler}
+                onChange={onChangeInputEmailHandler}
+                ref={emailInputRef}
+              />
+            </div>
+            <div>
+              <label htmlFor="text"> Message/enquiry: </label>
+              <input
+                type="text"
+                ref={textInputRef}
+                onBlur={onBlurInputTextHandler}
+                onChange={onChangeInputTextHandler}
+              />
+              {!isTextValid && <p>Please enter message</p>}
+            </div>
             <input
-              style={!isEmailValid ? { color: "red" } : {}}
-              type="email"
-              name="email"
-              onBlur={onBlurInputEmailHandler}
-              onChange={onChangeInputEmailHandler}
-              ref={emailInputRef}
+              type="submit"
+              value="Submit"
+              disabled={!isEmailValid || !isTextValid}
             />
-          </div>
-          <input
-            type="text"
-            ref={textInputRef}
-            onBlur={onBlurInputTextHandler}
-            onChange={onChangeInputTextHandler}
-          />
-          {!isTextValid && <p>Please enter message</p>}
-          <input
-            type="submit"
-            value="Submit"
-            ref={submitRef}
-            disabled={!isEmailValid || !isTextValid}
-          />
-        </form>
-      </div>
+          </form>
+        </div>
+      </span>
     </Card>
   );
 }
@@ -107,10 +121,12 @@ function ContactUsForm() {
 function ContactUs() {
   return (
     <div className="contactUs">
-      <ContactUsTitle heading="Contact Us" />
       <div className="container">
-        <ContactUsInfo />
-        <ContactUsForm />
+        <ContactUsTitle heading="Contact Us" />
+        <div className="contact-form-container">
+          <ContactUsInfo />
+          <ContactUsForm />
+        </div>
       </div>
     </div>
   );

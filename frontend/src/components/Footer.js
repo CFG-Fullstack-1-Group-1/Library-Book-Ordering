@@ -1,6 +1,8 @@
 import React from 'react';
 import './Footer.css';
 import whitelogo from '../../static/images/whitelogo.png';
+import { AiFillEnvironment } from "react-icons/ai";
+import { FiPhone, FiMail } from "react-icons/fi";
 
 function Footer() {
     return (
