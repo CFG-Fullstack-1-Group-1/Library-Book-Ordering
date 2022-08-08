@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 
 function Order({ book }) {
   const bookData = useLocation().state.book;
-  console.log(bookData);
   return (
     <section>
       <div className="AboutUs">
@@ -13,7 +12,7 @@ function Order({ book }) {
 
           <div className="paragraph">
             <h3>Please input the order details for the requested book</h3>
-            <OrderForm book={book} />
+            <OrderForm book={bookData} />
           </div>
         </div>
       </div>

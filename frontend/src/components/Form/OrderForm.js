@@ -8,9 +8,7 @@ import './OrderForm.css';
 function OrderForm({ book }) {
 
   const {handleChange, values, handleSubmit, errors} = useOrderForm(validateOrderInfo);
-  if (!book) {
-    book = null;
-  }
+
   console.log(book)
   return (
     <div className="form-container">
