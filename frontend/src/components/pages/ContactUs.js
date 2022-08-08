@@ -89,6 +89,7 @@ function ContactUsForm() {
               <input
                 style={!isEmailValid ? { color: "red" } : {}}
                 type="text"
+                className="contactUs-email"
                 name="email"
                 onBlur={onBlurInputEmailHandler}
                 onChange={onChangeInputEmailHandler}
