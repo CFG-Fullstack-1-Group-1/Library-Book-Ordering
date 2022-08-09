@@ -1,7 +1,5 @@
-/* ABOUT US PAGE */
 .AboutUs {
     width: 100%;
-
 }
 
 .AboutUs .container {
@@ -38,7 +36,7 @@
 
 .AboutUs .teampic {
     border-radius: 60px;
-    margin-top: -6rem;
+    margin-top: -4rem;
     margin-left: 40%;
     width: 110px;
     height: auto;
@@ -56,7 +54,13 @@
     font-weight: 700;
 }
 
-@media screen and (max-width: 940px) {
+.AboutUs-arrow {
+    width: 1.5rem;
+    margin: auto;
+    display: block;
+}
+
+@media screen and (max-width: 1220px) {
     .AboutUs .container {
         width: 100%; 
     }
@@ -70,32 +74,3 @@
         margin: 1rem;
     }
 }
-
-/* SEARCH PAGE */
-
-.SearchPage {
-    width: 100%;
-    display: flex;
-}
-
-.SearchPage .searchpage-container {
-    margin: auto;
-    padding: 4rem 0rem;
-}
-
-.SearchPage .searchpage-container .searchpage-info {
- text-align: center;
- margin: 10px auto;
-}
-
-.SearchPage .searchpage-container .searchpage-info h1 {
-    font-size: 3rem;
-    text-align: center;
-    color: var(--primary-dark);
-}
-
-@media screen and (max-width: 800px) {
-    .searchpage-container {
-      width: 95%;
-    }
-  }
