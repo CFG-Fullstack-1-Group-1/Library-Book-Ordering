@@ -76,6 +76,11 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
+### To run Django tests
+```
+python manage.py test
+```
+
 ### Superuser
 - Username: user
 - Email: user@email.com
