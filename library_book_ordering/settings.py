@@ -131,4 +131,8 @@ CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:8000'
 ]
 
-AUTH_USER_MODEL = 'api.User';
+AUTH_USER_MODEL = 'api.User'
+
+REST_FRAMEWORK = {
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json'
+}

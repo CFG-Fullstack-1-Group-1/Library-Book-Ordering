@@ -10,6 +10,8 @@ function TestPage() {
   // Show Book Details on click
   const [openBookDetails, setOpenBookDetails] = useState(false);
 
+  // Sending Orders to Order.js
+
   // Get book details from Django API.
   function getBook(google_books_id) {
     fetch(`/api/book/${google_books_id}/`)
@@ -50,7 +52,7 @@ function TestPage() {
                   <div className="bookresults-bottom">
                     <p className="result-title">{book.title}</p>
                     <p className="result-info">{`Author ${book.authors}`}</p>
-                    <p className="result-info">{`Year ${book.publishedDate}`}</p>
+                    <p className="result-info">{`Year ${book.year}`}</p>
                     <p className="result-info">{`ISBN 10 ${book.isbn_10}`}</p>
                     {/* Connect GoogleBooks ID To this specific button and create a link to an overlay or page for it */}
                     <button

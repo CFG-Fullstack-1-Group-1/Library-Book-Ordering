@@ -1,7 +1,17 @@
 import React from "react";
 import OrderForm from "../Form/OrderForm";
+import { useLocation } from "react-router-dom";
 
-function Order() {
+function Order({ book }) {
+  let bookData;
+  // Try to load book data.
+  try {
+    bookData = useLocation().state.book;
+  } // If there's no book data, use an empty string.
+  catch (TypeError) {
+    bookData = "";
+  }
+  
   return (
     <section>
       <div className="AboutUs">
@@ -10,7 +20,7 @@ function Order() {
 
           <div className="paragraph">
             <h3>Please input the order details for the requested book</h3>
-            <OrderForm />
+            <OrderForm book={bookData} />
           </div>
         </div>
       </div>
