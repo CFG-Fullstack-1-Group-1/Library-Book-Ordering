@@ -1,9 +1,16 @@
 import React from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import "./BookDetails.css";
+import Order from "../../pages/Order";
 
 // Used https://www.youtube.com/watch?v=ZCvemsUfwPQ to design closing and opening of pop-up
 
 function BookDetails({ book, closeBookDetails }) {
+  const navigate = useNavigate();
+  const navigateToOrder = () => {
+    navigate("/order", {state:{book:book}});
+  };
+
   return (
     <>
       <div className="overlay">
@@ -18,15 +25,26 @@ function BookDetails({ book, closeBookDetails }) {
               <h2>{book.authors}</h2>
               <p>{`ISBN10: ${book.isbn_10}`}</p>
               <p>{`ISBN13: ${book.isbn_13}`}</p>
-              <p>{`Google Books ID: ${book.google_books_id}`}</p>
+              <p>{`Year: ${book.year}`}</p>
               <p>{`Publisher: ${book.publisher}`}</p>
               <p>{`Category: ${book.category}`}</p>
             </div>
           </div>
           <p>Description</p>
           <p className="book-description">{`${book.description}`}</p>
-          <button className='bookdetails-cancel-btn' onClick={() => closeBookDetails(false)}>Cancel</button>
-          <button className='bookdetails-btn'>Book details</button>
+          <button
+            className="bookdetails-cancel-btn"
+            onClick={() => closeBookDetails(false)}
+          >
+            Cancel
+          </button>
+          <button className="bookdetails-btn" onClick={navigateToOrder}>
+            Order
+          </button>
+
+          <Routes>
+            <Route path="/order" element={<Order book={ book } />} />
+          </Routes>
         </div>
       </div>
     </>
