@@ -66,7 +66,7 @@ function OrderForm({ book }) {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        setOpenOrderConfirmation(true);
       });
   }
 
@@ -74,6 +74,9 @@ function OrderForm({ book }) {
     <div>
       {openOrderConfirmation && (
         <OrderConfirmation
+          title={title}
+          authors={authors}
+          year={year}
           open={openOrderConfirmation}
           onClose={() => setOpenOrderConfirmation(false)}
         />
@@ -233,12 +236,7 @@ function OrderForm({ book }) {
                 <button className="form-input-btn" onClick={refreshForm}>
                   Cancel
                 </button>
-                <input
-                  type="submit"
-                  className="form-input-btn"
-                  value="Order"
-                  onClick={() => setOpenOrderConfirmation(true)}
-                />
+                <input type="submit" className="form-input-btn" value="Order" />
               </div>
             </form>
           </div>
