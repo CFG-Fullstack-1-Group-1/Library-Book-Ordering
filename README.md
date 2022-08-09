@@ -76,9 +76,16 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-### To run Django tests
+### To run Django tests (backend)
 ```
+cd library-book-ordering
 python manage.py test
+```
+
+### To run Jest tests (frontend)
+```
+cd library-book-ordering/frontend
+npm test
 ```
 
 ### Superuser
