@@ -13,7 +13,7 @@ function OrderForm({ book }) {
   }
 
   // This will bring up the Order Confirmation Modal
-  const [openOrderConfirmation, setOpenOrderConfirmation] = useState(true);
+  const [openOrderConfirmation, setOpenOrderConfirmation] = useState(false);
 
   // This assigns each prop from bookdata into each field
   const [title, setTitle] = useState(book.title);
