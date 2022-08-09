@@ -1,4 +1,5 @@
-import React, { createRef, useState } from "react";
+import React, { createRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../ContactUs/ContactUs.css";
 import ContactUsTitle from "../ContactUs/ContactUsTitle";
 import Card from "../ContactUs/Card";
@@ -32,8 +33,16 @@ function ContactUsInfo() {
 function ContactUsForm() {
   const emailInputRef = createRef();
   const textInputRef = createRef();
+  const navigate = useNavigate();
   const [isEmailValid, setIsEmailValid] = useState(true);
   const [isTextValid, setIsTextValid] = useState(true);
+  const [isDone, setIsDone] = useState(false);
+
+  useEffect(()=>{
+    if (isDone){
+      const timer = setTimeout(()=>navigate("/"),2000);
+    }
+  },[isDone])
 
   function validateEmail(email) {
     return email.match(/^([a-z0-9_-]+\@[a-z0-9_-]+\.[a-z]+)$/);
@@ -77,6 +86,7 @@ function ContactUsForm() {
       console.log(`Send contact to ${email} with text: ${text}`);
       emailInputRef.current.value = "";
       textInputRef.current.value = "";
+      setIsDone(true);
     }
   }
 
@@ -98,14 +108,14 @@ function ContactUsForm() {
             </div>
             <div>
               <label htmlFor="text"> Message/enquiry: </label>
-              <input
-                type="text"
+              <textarea
                 className="contactUs-text"
                 ref={textInputRef}
                 onBlur={onBlurInputTextHandler}
                 onChange={onChangeInputTextHandler}
               />
               {!isTextValid && <p>Please enter message</p>}
+              {isDone && <p>Thank you for contacting us.</p>}
             </div>
             <div className="submit-btn-container">
               <input className="contactUs-btn"

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import user1 from "../AboutUs/images/user1.jpg";
-import user2 from "../../../static/images/user2.jpeg";
+import user2 from "../AboutUs/images/user2.jpg";
 import user3 from "../AboutUs/images/user3.png";
 import user4 from "../AboutUs/images/user4.png";
 import "../AboutUs/AboutUs.css";
