@@ -7,7 +7,8 @@ import OrderConfirmation from "./OrderConfirmation";
 }
 
 function OrderForm({ book }) {
-  // This refreshes the page if an order is cancelled/submitted
+
+  // This refreshes the page if an order is cancelled
   function refreshForm() {
     window.location.reload(false);
   }
