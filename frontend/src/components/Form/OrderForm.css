@@ -103,7 +103,7 @@
   justify-content: space-between;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width:1248px) {
   .form-container {
     width: 80%;
   }

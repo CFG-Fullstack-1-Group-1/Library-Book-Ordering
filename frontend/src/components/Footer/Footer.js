@@ -16,7 +16,7 @@ function Footer() {
                     <div className="footer-items">
                     <img src={whitelogo} alt="whitelogo" className="footer-whitelogo"/>
                         <p className="logo-tagline">
-                            library orders. simplified. 
+                            Library orders. simplified. 
                         </p>
                             <h2>What we do?</h2>
                             <p>Insert text about Requisit here hello hello hello hello hello </p>
