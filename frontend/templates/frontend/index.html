@@ -17,7 +17,8 @@
 <!--  If a user is not logged in, they'll see the following pages, it's just a link right now but we can reformat that to a login page -->
     <a href="{% url 'login' %}"> Log In</a>
     {% else %}
-    <a href="{% url 'logout' %}">Log Out</a>
+    <!-- This has been commented out fr styling purposes -->
+    <!-- <a href="{% url 'logout' %}">Log Out</a> -->
     <div id="root"></div>
     {% endif %}
   </div>
