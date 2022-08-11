@@ -4,8 +4,8 @@ from django.contrib.auth.models import AbstractUser
 # Create your models here.
 class Order(models.Model):
     # Primary key order_id added by default
-    user = models.ForeignKey(
-        'User', null=True, on_delete=models.SET_NULL, related_name="orders")  # Many orders to one user ID
+    # user = models.ForeignKey(
+    #     'User', null=True, on_delete=models.SET_NULL, related_name="orders")  # Many orders to one user ID
     borrower = models.ForeignKey(
         'Borrower', null=True, on_delete=models.SET_NULL, related_name="orders")  # Many orders to one borrower ID
     book = models.ForeignKey(
