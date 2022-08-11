@@ -60,7 +60,7 @@
 
 .search-btn:hover {
   cursor: pointer;
-  background: rgb(5, 28, 39);
+  background: #ff6363;
   font-weight: 600;
   transition: all 0.1s ease-out;
 }
@@ -119,7 +119,7 @@
 
 .bookresults-card .bookresults-btn:hover {
   cursor: pointer;
-  background: rgb(5, 28, 39);
+  background: #ff6363;
   font-weight: 600;
   transition: all 0.1s ease-out;
 }
