@@ -25,7 +25,7 @@ function BookDetails({ title, authors, year, open, onClose }) {
           <h1 className="confirmation-title">Order Confirmed</h1>
           <div className="confirmation-inner-box">
             <h4>
-              Your book request hs been successfully sent to be ordered you
+              Your book request has been successfully sent to be ordered you
               should expect a response in 3 to 5 business days.
             </h4>
             <h3>Your order details are as follows:</h3>
