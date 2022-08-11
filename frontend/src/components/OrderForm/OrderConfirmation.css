@@ -86,3 +86,41 @@
   cursor: pointer;
   transform: scale(1.1);
 }
+
+@media screen and (max-width: 1248px) {
+  .bookconf-overlay {
+    width: 300px;
+    height: 600px;
+  }
+
+  .bookconf-overlay .bookconf-overlay-inner {
+    width: 600px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .bookconf-overlay .bookconf-overlay-inner .confirmation-img {
+    height: 70px;
+  }
+
+  .bookconf-overlay .bookconf-overlay-inner h1 {
+    font-weight: 400;
+  }
+
+  .bookconf-overlay .bookconf-overlay-inner .confirmation-title {
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .bookconf-overlay .bookconf-overlay-inner .confirmation-inner-box {
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .bookconf-overlay .bookconf-overlay-inner .confirmation-inner-box h3 {
+    margin-top: 10px;
+    font-weight: 400;
+  }
+}

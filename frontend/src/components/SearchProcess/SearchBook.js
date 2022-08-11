@@ -84,7 +84,7 @@ function TestPage() {
 
   return (
     // This is the Book Details overlay
-    <div className="test-container">
+    <div className="bookdetails-container">
       {/* Search tab with search button */}
       <div className="searchtab-container">
         <div className="search-input-container">
