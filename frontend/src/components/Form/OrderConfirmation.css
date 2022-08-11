@@ -1,78 +1,74 @@
-.overlay {
-  width: 100%;
-  position: relative;
-  background: var(--secondary-dark);
+.confirmation-container {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
-.overlay-inner {
+.bookconf-overlay {
+  width: 600px;
+  height: 600px;
+  margin: 0%;
+  position: relative;
+  background: var(--secondary-dark);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.bookconf-overlay .bookconf-overlay-inner {
   background: white;
-  width: 700px;
-  height: 550px;
+  width: 600px;
   padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 50px;
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
   font-size: 1.3rem;
+  text-align: center;
 }
 
-.overlay .overlay-inner .close-btn {
-  position: absolute;
-  width: 100px;
-  height: 40px;
-  top: 1rem;
-  right: 1rem;
-  outline: none;
-  border: none;
-  font-size: 100%;
-  background-color: var(--primary-dark);
-  border-radius: 50px;
-  color: white;
+.bookconf-overlay .bookconf-overlay-inner .confirmation-img {
+  height: 130px;
 }
 
-.overlay .overlay-inner .close-btn:hover {
-  color: var(--primary-dark);
-  background-color: white;
-  outline: auto;
-  border: auto;
-  border-color: var(--primary-dark);
-  cursor: pointer;
+.bookconf-overlay .bookconf-overlay-inner h1 {
+  font-weight: 400;
 }
 
-.overlay .overlay-inner .book-title {
+.bookconf-overlay .bookconf-overlay-inner .confirmation-title {
   color: black;
   font-size: 30px;
 }
 
-.overlay-inner .inner-box {
+.bookconf-overlay .bookconf-overlay-inner .confirmation-inner-box {
   margin-top: 20px;
-  display: flex;
-}
-.overlay-inner .inner-box img {
-  margin-right: 20px;
-  width: auto;
-  height: 250px;
+  justify-content: center;
+  text-align: center;
 }
 
-.overlay-inner .book-description {
-  margin-top: 0.5rem;
-  text-align: justify;
-  font-size: 16px;
-  width: 95%;
-  display: block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+.bookconf-overlay .bookconf-overlay-inner .confirmation-inner-box h3 {
+  margin-top: 10px;
+  font-weight: 400;
 }
 
-.overlay .overlay-inner .bookdetails-btn {
+.bookconf-overlay
+  .bookconf-overlay-inner
+  .confirmation-inner-box
+  .book-details {
+  text-align: left;
+  margin: 10px;
+}
+
+.bookconf-overlay .bookconf-overlay-inner .confirmation-btn-container {
+  text-align: center;
+}
+
+.bookconf-overlay .bookconf-overlay-inner .confirmation-btn {
   position: relative;
-  width: fit-content;
+  width: 160px;
   height: 40px;
   top: 1rem;
-  right: 1rem;
+  margin: 7;
   outline: none;
   border: none;
   font-size: 100%;
@@ -81,36 +77,12 @@
   color: white;
 }
 
-.overlay .overlay-inner .bookdetails-btn:hover {
+.bookconf-overlay .bookconf-overlay-inner .confirmation-btn:hover {
   color: var(--primary-dark);
   background-color: white;
   outline: auto;
   border: auto;
   border-color: var(--primary-dark);
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.overlay .overlay-inner .bookdetails-cancel-btn {
-  position: relative;
-  width: 100px;
-  height: 40px;
-  top: 1rem;
-  right: 1rem;
-  outline: none;
-  border: none;
-  font-size: 100%;
-  background-color: red;
-  border-radius: 50px;
-  color: black;
-}
-
-.overlay .overlay-inner .bookdetails-cancel-btn:hover {
-  color: black;
-  background-color: white;
-  outline: auto;
-  border: auto;
-  border-color: red;
   cursor: pointer;
   transform: scale(1.1);
 }
