@@ -8,11 +8,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // Importing the main items for the site
 import Navbar from "./NavBar/Navbar";
-import Home from "./pages/Home";
-import TestPage from "./Test/TestSearch";
-import Order from "./pages/Order";
-import AboutUs from "./pages/AboutUs";
-import ContactUs from "./pages/ContactUs";
+import Home from "./Pages/Home";
+import Search from "./SearchProcess/SearchBook";
+import Order from "./Pages/Order";
+import AboutUs from "./Pages/AboutUs";
+import ContactUs from "./Pages/ContactUs";
 import Footer from "./Footer/Footer";
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/search" element={<TestPage />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/order" element={<Order />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
