@@ -16,7 +16,9 @@ function Hero() {
             books.
           </p>
         </div>
-        <WavesAnimation className="waves" />
+        <div className="wave-container">
+          <WavesAnimation className="waves" />
+        </div>
       </div>
     </div>
   );

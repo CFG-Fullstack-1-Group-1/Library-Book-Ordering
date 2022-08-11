@@ -1,13 +1,13 @@
-import React from 'react';
-import '../../index.css';
-import Hero from '../Hero/Hero';
+import React from "react";
+import "../../index.css";
+import Hero from "../Hero/Hero";
 
 function Home() {
-    return (
-        <>
-        <Hero/>
-        </>
-    )
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
 
-export default Home
+export default Home;

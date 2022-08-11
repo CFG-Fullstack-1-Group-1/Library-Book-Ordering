@@ -38,11 +38,11 @@ function ContactUsForm() {
   const [isTextValid, setIsTextValid] = useState(true);
   const [isDone, setIsDone] = useState(false);
 
-  useEffect(()=>{
-    if (isDone){
-      const timer = setTimeout(()=>navigate("/"),2000);
+  useEffect(() => {
+    if (isDone) {
+      const timer = setTimeout(() => navigate("/"), 2000);
     }
-  },[isDone])
+  }, [isDone]);
 
   function validateEmail(email) {
     return email.match(/^([a-z0-9_-]+\@[a-z0-9_-]+\.[a-z]+)$/);
@@ -92,40 +92,41 @@ function ContactUsForm() {
 
   return (
     <Card className="contact-us-form-card">
-        <div>
-          <form onSubmit={onSubmit}>
-            <div>
-              <label htmlFor="email">Your email: </label>
-              <input
-                style={!isEmailValid ? { color: "red" } : {}}
-                type="text"
-                className="contactUs-email"
-                name="email"
-                onBlur={onBlurInputEmailHandler}
-                onChange={onChangeInputEmailHandler}
-                ref={emailInputRef}
-              />
-            </div>
-            <div>
-              <label htmlFor="text"> Message/enquiry: </label>
-              <textarea
-                className="contactUs-text"
-                ref={textInputRef}
-                onBlur={onBlurInputTextHandler}
-                onChange={onChangeInputTextHandler}
-              />
-              {!isTextValid && <p>Please enter message</p>}
-              {isDone && <p>Thank you for contacting us.</p>}
-            </div>
-            <div className="submit-btn-container">
-              <input className="contactUs-btn"
-                type="submit"
-                value="Submit"
-                disabled={!isEmailValid || !isTextValid}
-              />
-            </div>
-          </form>
-        </div>
+      <div>
+        <form onSubmit={onSubmit}>
+          <div>
+            <label htmlFor="email">Your email: </label>
+            <input
+              style={!isEmailValid ? { color: "red" } : {}}
+              type="text"
+              className="contactUs-email"
+              name="email"
+              onBlur={onBlurInputEmailHandler}
+              onChange={onChangeInputEmailHandler}
+              ref={emailInputRef}
+            />
+          </div>
+          <div>
+            <label htmlFor="text"> Message/enquiry: </label>
+            <textarea
+              className="contactUs-text"
+              ref={textInputRef}
+              onBlur={onBlurInputTextHandler}
+              onChange={onChangeInputTextHandler}
+            />
+            {!isTextValid && <p>Please enter message</p>}
+            {isDone && <p>Thank you for contacting us.</p>}
+          </div>
+          <div className="submit-btn-container">
+            <input
+              className="contactUs-btn"
+              type="submit"
+              value="Submit"
+              disabled={!isEmailValid || !isTextValid}
+            />
+          </div>
+        </form>
+      </div>
     </Card>
   );
 }

@@ -1,14 +1,14 @@
 import React from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import "./BookDetails.css";
-import Order from "../../pages/Order";
+import Order from "../../Pages/Order";
 
 // Used https://www.youtube.com/watch?v=ZCvemsUfwPQ to design closing and opening of pop-up
 
 function BookDetails({ book, closeBookDetails }) {
   const navigate = useNavigate();
   const navigateToOrder = () => {
-    navigate("/order", {state:{book:book}});
+    navigate("/order", { state: { book: book } });
   };
 
   return (
@@ -37,7 +37,7 @@ function BookDetails({ book, closeBookDetails }) {
           </button>
 
           <Routes>
-            <Route path="/order" element={<Order book={ book } />} />
+            <Route path="/order" element={<Order book={book} />} />
           </Routes>
         </div>
       </div>

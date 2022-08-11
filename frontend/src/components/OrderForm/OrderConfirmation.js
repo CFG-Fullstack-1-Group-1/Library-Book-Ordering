@@ -1,8 +1,8 @@
 import React from "react";
 import "./OrderConfirmation.css";
 import { Route, Routes, useNavigate } from "react-router-dom";
-import Home from "../pages/Home";
-import ConfirmationIMG from "../../../static/images/confirmation-tick.png";
+import Home from "../Pages/Home";
+import ConfirmationIMG from "./confirmation-tick.png";
 
 function BookDetails({ title, authors, year, open, onClose }) {
   // Keeps it closed if not told to be open
