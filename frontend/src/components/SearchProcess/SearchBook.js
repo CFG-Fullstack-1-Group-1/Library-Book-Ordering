@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import BookDetails from "./Modal/BookDetails";
-import "./TestSearch.css";
+import BookDetails from "./BookResults/BookDetails";
+import "./SearchBook.css";
 
 function TestPage() {
   // Holds book details

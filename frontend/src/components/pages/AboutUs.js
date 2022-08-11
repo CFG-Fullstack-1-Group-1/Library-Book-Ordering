@@ -30,7 +30,7 @@ function AboutUs() {
             <AboutUsProfile
               pic={user1}
               name="Anna Sapsford-Francis"
-              shortDescription="Head of things"
+              shortDescription="Tech Lead"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
               varius duis at consectetur lorem donec massa."
@@ -38,7 +38,7 @@ function AboutUs() {
             <AboutUsProfile
               pic={user2}
               name="Eleanor"
-              shortDescription="Head of thinking"
+              shortDescription="Product Owner"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
               varius duis at consectetur lorem donec massa."
@@ -48,8 +48,8 @@ function AboutUs() {
           <div className="members-container1">
             <AboutUsProfile
               pic={user3}
-              name="Mariam"
-              shortDescription="Head of thanks"
+              name="Mariam Hussein"
+              shortDescription="Project Manager"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
               varius duis at consectetur lorem donec massa."
@@ -57,7 +57,7 @@ function AboutUs() {
             <AboutUsProfile
               pic={user4}
               name="Margalida Bover Torres"
-              shortDescription="Head of thoughts"
+              shortDescription="Design Lead"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum
               varius duis at consectetur lorem donec massa."
