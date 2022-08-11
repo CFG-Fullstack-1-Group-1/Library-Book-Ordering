@@ -78,10 +78,10 @@ function Navbar() {
           </li>
 
           <li className="nav-item">
-            <Link to="/admin" className="nav-links" onClick={closeMobileMenu}>
-              Admin
-              <i class="fa-solid fa-user" />
-            </Link>
+          <a href="/admin" className="nav-links" onClick={closeMobileMenu}>
+            Admin
+            <i class="fa-solid fa-user" />
+            </a>
           </li>
         </ul>
       </nav>
