@@ -1,0 +1,88 @@
+.confirmation-container {
+  display: flex;
+  justify-content: center;
+}
+
+.bookconf-overlay {
+  width: 600px;
+  height: 600px;
+  margin: 0%;
+  position: relative;
+  background: var(--secondary-dark);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.bookconf-overlay .bookconf-overlay-inner {
+  background: white;
+  width: 600px;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 50px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.bookconf-overlay .bookconf-overlay-inner .confirmation-img {
+  height: 130px;
+}
+
+.bookconf-overlay .bookconf-overlay-inner h1 {
+  font-weight: 400;
+}
+
+.bookconf-overlay .bookconf-overlay-inner .confirmation-title {
+  color: black;
+  font-size: 30px;
+}
+
+.bookconf-overlay .bookconf-overlay-inner .confirmation-inner-box {
+  margin-top: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.bookconf-overlay .bookconf-overlay-inner .confirmation-inner-box h3 {
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.bookconf-overlay
+  .bookconf-overlay-inner
+  .confirmation-inner-box
+  .book-details {
+  text-align: left;
+  margin: 10px;
+}
+
+.bookconf-overlay .bookconf-overlay-inner .confirmation-btn-container {
+  text-align: center;
+}
+
+.bookconf-overlay .bookconf-overlay-inner .confirmation-btn {
+  position: relative;
+  width: 160px;
+  height: 40px;
+  top: 1rem;
+  margin: 7;
+  outline: none;
+  border: none;
+  font-size: 100%;
+  background-color: var(--primary-dark);
+  border-radius: 50px;
+  color: white;
+}
+
+.bookconf-overlay .bookconf-overlay-inner .confirmation-btn:hover {
+  color: var(--primary-dark);
+  background-color: white;
+  outline: auto;
+  border: auto;
+  border-color: var(--primary-dark);
+  cursor: pointer;
+  transform: scale(1.1);
+}

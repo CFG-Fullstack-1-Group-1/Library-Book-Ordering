@@ -32,12 +32,6 @@ function BookDetails({ book, closeBookDetails }) {
           </div>
           <p>Description</p>
           <p className="book-description">{`${book.description}`}</p>
-          <button
-            className="bookdetails-cancel-btn"
-            onClick={() => closeBookDetails(false)}
-          >
-            Cancel
-          </button>
           <button className="bookdetails-btn" onClick={navigateToOrder}>
             Order
           </button>

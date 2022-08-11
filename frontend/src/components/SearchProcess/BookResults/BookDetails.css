@@ -2,7 +2,13 @@
   min-height: 65vh;
   width: 100%;
   position: relative;
-  background: var(--primary-dark);
+  background: linear-gradient(
+    180deg,  
+    rgb(255, 255, 255) 1%, 
+    rgba(176,226,230,1) 40%, 
+    rgb(176, 232, 240) 70%, 
+    rgb(255, 255, 255) 100%
+    );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,18 +34,15 @@
   outline: none;
   border: none;
   font-size: 100%;
-  background-color: var(--primary-dark);
+  background-color: #66bfcb;
   border-radius: 50px;
   color: white;
 }
 
 .overlay .overlay-inner .close-btn:hover {
-  color: var(--primary-dark);
-  background-color: white;
-  outline: auto;
-  border: auto;
-  border-color: var(--primary-dark);
   cursor: pointer;
+  background: #ff6363;
+  transition: all 0.1s ease-out;
 }
 
 .overlay .overlay-inner .book-title {
@@ -77,34 +80,18 @@
   outline: none;
   border: none;
   font-size: 100%;
-  background-color: var(--primary-dark);
+  background-color: #66bfcb;
   border-radius: 50px;
   color: white;
+  padding: 0 20px;
 }
 
 .overlay .overlay-inner .bookdetails-btn:hover {
-  color: var(--primary-dark);
-  background-color: white;
-  outline: auto;
-  border: auto;
-  border-color: var(--primary-dark);
   cursor: pointer;
-  transform: scale(1.1);
+  background: #ff6363;
+  transition: all 0.1s ease-out;
 }
 
-.overlay .overlay-inner .bookdetails-cancel-btn {
-  position: relative;
-  width: 100px;
-  height: 40px;
-  top: 1rem;
-  right: 1rem;
-  outline: none;
-  border: none;
-  font-size: 100%;
-  background-color: red;
-  border-radius: 50px;
-  color: black;
-}
 
 .overlay .overlay-inner .bookdetails-cancel-btn:hover {
   color: black;

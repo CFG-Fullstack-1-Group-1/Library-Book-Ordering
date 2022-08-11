@@ -106,7 +106,7 @@
 
 .contactUs-btn:hover {
     cursor: pointer;
-    background: rgb(5, 28, 39);
+    background: #ff6363;
     transition: all 0.1s ease-out;
   }
 
