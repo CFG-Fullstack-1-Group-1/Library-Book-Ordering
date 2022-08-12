@@ -8,11 +8,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // Importing the main items for the site
 import Navbar from "./NavBar/Navbar";
-import Home from "./Pages/Home";
+import Home from "./pages/Home";
 import Search from "./SearchProcess/SearchBook";
-import Order from "./Pages/Order";
-import AboutUs from "./Pages/AboutUs";
-import ContactUs from "./Pages/ContactUs";
+import Order from "./pages/Order";
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
 import Footer from "./Footer/Footer";
 
 function App() {
