@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import "./BookDetails.css";
-import Order from "../../Pages/Order";
+import Order from "../../pages/Order";
 
 // Used https://www.youtube.com/watch?v=ZCvemsUfwPQ to design closing and opening of pop-up
 
