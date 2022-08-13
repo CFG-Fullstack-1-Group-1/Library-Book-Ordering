@@ -95,7 +95,7 @@ The internal API. Connects to the database and requests data from Google Books. 
 - [admin.py](./api/admin.py) -> admin view settings
 - [models.py](./api/models.py) -> database settings
 - [serializers.py](./api/serializers.py) -> api json settings
-- [tests.py](./api/tests.py) -> Python unit tests
+- [tests](./api/tests) -> Python unit tests
 - [urls.py](./api/urls.py) -> api endpoints
 - [views.py](./api/views.py) -> api server logic
 
