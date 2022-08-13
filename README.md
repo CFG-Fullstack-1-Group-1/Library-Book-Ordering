@@ -1,5 +1,7 @@
 # Library Book Ordering Application
 
+To find out about this project and the members behind it, please watch over at: https://www.youtube.com/watch?v=bpE9dG1jXHk
+
 ## To get the project running
 
 ### Activate virtual environment
